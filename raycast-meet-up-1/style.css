@@ -1,0 +1,531 @@
+/* @theme mamansoft */
+@import "gaia";
+
+/* 変数 */
+:root {
+  --color-foreground: #cbcbcb;
+  --color-background: #000000;
+  --color-primary: #3db680;
+  --color-secondary: #ce579b;
+  --color-dimmed-background: #f8f6f1;
+  --color-ghost: #47484c;
+  --color-filter-foreground: brightness(0) saturate(100%) invert(33%) sepia(0%)
+    saturate(4%) hue-rotate(152deg) brightness(94%) contrast(81%);
+  --color-filter-primary: brightness(0) saturate(100%) invert(57%) sepia(24%)
+    saturate(971%) hue-rotate(101deg) brightness(102%) contrast(89%);
+  --color-filter-secondary: brightness(0) saturate(100%) invert(49%) sepia(39%)
+    saturate(902%) hue-rotate(275deg) brightness(86%) contrast(85%);
+}
+
+/* フォント*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+
+/* 色 */
+.text-foreground {
+  color: var(--color-foreground);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.text-secondary {
+  color: var(--color-secondary);
+}
+.text-dimmed {
+  color: var(--color-dimmed);
+}
+.text-ghost {
+  color: var(--color-ghost);
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+/******************************
+ * 基本
+ *****************************/
+
+/* 見出し */
+section {
+  padding: 1em 2em;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+section h1 {
+  color: var(--color-primary);
+}
+section h3 {
+  font-size: 1.05em;
+}
+section h4 {
+  font-size: 1em;
+}
+section h5 {
+  font-size: 0.9em;
+}
+section h6 {
+  font-size: 0.8em;
+}
+/* タイトルのh2 */
+section:not(.lead) > h2 {
+  color: var(--color-primary);
+  font-size: 1.1em;
+}
+
+section h2 > em {
+  color: var(--color-dimmed);
+  font-size: 0.65em;
+}
+section h2 > em:before,
+section h2 > em:after {
+  content: "~";
+}
+
+/* 段落 */
+section p {
+  font-size: 0.9em;
+}
+
+/* コード */
+section code:not([class^="language-"]) {
+  font-size: 0.7em;
+  padding: 0.2em;
+  border-radius: 8px;
+  color: var(--color-secondary);
+  background-color: var(--color-dimmed-background);
+}
+section code[class^="language-"] {
+  font-size: 0.6em;
+  padding: 1em;
+  color: var(--color-foreground);
+  background-color: var(--color-dimmed-background);
+}
+section marp-pre {
+  color: var(--color-foreground);
+  background-color: var(--color-dimmed-background);
+}
+
+/* 箇条書き */
+section ul > li {
+  font-size: 0.85em;
+  position: relative;
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0.5em;
+}
+section ul > li:before {
+  border-radius: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  top: 0.5em;
+  left: -1.1em;
+  display: block;
+  position: absolute;
+  content: "";
+  background-color: var(--color-primary);
+}
+
+section ol {
+  counter-reset: number;
+}
+section ol li {
+  font-size: 0.85em;
+  position: relative;
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0.5em;
+  margin-bottom: 1em;
+}
+section ol li:before {
+  font-weight: bold;
+  background-color: var(--color-primary);
+  color: var(--color-dimmed-background);
+
+  counter-increment: number;
+  border-radius: 50%;
+  font-size: 0.7em;
+  width: 1.8em;
+  height: 1.8em;
+  top: 1.53em;
+  left: -2.6em;
+  display: grid;
+  place-items: center;
+  place-content: center;
+
+  position: absolute;
+  content: counter(number);
+  margin-top: -1.4em;
+}
+
+/* リンク */
+section a {
+  text-decoration: none;
+}
+
+/* 装飾 */
+section em {
+  font-style: normal;
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+section s {
+  text-decoration: none;
+  color: var(--color-ghost);
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  font-size: 0.5em;
+  margin-bottom: 0.3em;
+}
+footer a {
+  text-decoration: none;
+  color: var(--color-ghost);
+}
+
+/* テーブル */
+section table {
+  font-size: 0.75em;
+  margin-top: 2em;
+}
+section table thead th {
+  color: var(--color-primary);
+  background-color: var(--color-background);
+  padding: 0.5em 1em;
+  text-align: start;
+  border-color: var(--color-background);
+  border-bottom-color: var(--color-primary);
+  border-bottom-width: 2px;
+}
+section table tbody tr,
+section table tbody td {
+  font-size: 0.95em;
+  padding: 0.5em 1em;
+  border-color: var(--color-background);
+  border-bottom-color: var(--color-dimmed);
+}
+
+section table tbody tr:nth-child(odd) td {
+  padding: 0.5em 1em;
+  border-color: var(--color-background);
+  border-bottom-color: var(--color-dimmed);
+  background-color: var(--color-background);
+}
+
+/******************************
+ * Directive
+ *****************************/
+
+/* 余白なし */
+section.full {
+  padding: 0;
+  margin: 0;
+}
+/* 白文字のナレーション中央 */
+section.narration-white > p {
+  color: white;
+  padding: 24px;
+  font-size: 1.5em;
+  font-weight: bold;
+  /* background-color: #00000080; */
+}
+/* 暗転背景にテキスト */
+section.text-dimmed-background * {
+  color: var(--color-dimmed-background);
+}
+/* ヘッダなしテーブル */
+section.headless-table table thead th {
+  border-bottom-color: var(--color-dimmed);
+  border-bottom-width: 1px;
+}
+
+/******************************
+ * その他
+ *****************************/
+section .note {
+  font-size: 70%;
+  color: var(--color-dimmed);
+}
+
+section p:has(> img[alt~="center"]) {
+  text-align: center;
+}
+section img[alt~="full"] {
+  width: 100%;
+}
+section img[alt~="foreground"] {
+  filter: var(--color-filter-foreground);
+}
+section img[alt~="primary"] {
+  filter: var(--color-filter-primary);
+}
+section img[alt~="secondary"] {
+  filter: var(--color-filter-secondary);
+}
+
+section .label {
+  font-size: 0.7em;
+  color: var(--color-dimmed-background);
+  background-color: var(--color-dimmed);
+  text-align: center;
+  display: inline-block;
+  width: 8em;
+  height: 2em;
+  border-radius: 4px;
+}
+
+/* 画面右上に補足 */
+section .tag-note {
+  font-size: 0.5em;
+  padding: 0.2em 0.4em;
+  font-weight: bold;
+  filter: opacity(0.85);
+  color: var(--color-dimmed-background);
+  background-color: var(--color-secondary);
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+}
+
+/******************************
+ * Blockquote
+ *****************************/
+section blockquote {
+  font-size: 75%;
+  background-color: var(--color-dimmed-background);
+  padding: 48px;
+}
+section blockquote:before,
+section blockquote:after {
+  padding: 0.75em;
+}
+section blockquote a {
+  display: block;
+  margin-top: 24px;
+  font-size: 75%;
+  text-align: end;
+  text-decoration: none;
+}
+section blockquote a::after {
+  content: " より引用";
+  font-size: 75%;
+  color: var(--color-dimmed);
+}
+
+/******************************
+ * Chapter
+ *****************************/
+section.chapter-divider {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template:
+    "left ... ..... ..." 1.5em
+    "left ... right ..." 1fr
+    "left ... ..... ..." 1.5em
+    / 30% 10% 50% 10%;
+}
+section.chapter-divider > .left {
+  grid-area: left;
+  color: var(--color-dimmed-background);
+  background-color: var(--color-primary);
+  display: grid;
+  place-items: center;
+  place-content: center;
+}
+section.chapter-divider > .right {
+  grid-area: right;
+}
+section.chapter-divider h2 {
+  font-size: 1.75em;
+  margin: 0.3em 0;
+}
+section.chapter-divider ol > li {
+  position: relative;
+  font-size: 1em;
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-bottom: 2em;
+  color: var(--color-primary);
+}
+section.chapter-divider ol > li:before {
+  counter-increment: number;
+  border-radius: 50%;
+  font-size: 0.8em;
+  width: 2em;
+  height: 2em;
+  top: 1.3em;
+  left: -2.8em;
+  display: grid;
+  place-items: center;
+  place-content: center;
+
+  position: absolute;
+  content: counter(number, decimal-leading-zero);
+  margin-top: -1.4em;
+  color: var(--color-primary);
+  border: dashed 1px var(--color-primary);
+  background-color: var(--color-background);
+}
+section.chapter-divider ol > li:has(strong) {
+  color: var(--color-primary);
+}
+section.chapter-divider ol > li:has(strong):before {
+  font-weight: bold;
+  background-color: var(--color-primary);
+  color: var(--color-dimmed-background);
+}
+section.chapter-divider ol > li:has(s) {
+  color: var(--color-ghost);
+}
+section.chapter-divider ol > li:has(s):before {
+  color: var(--color-ghost);
+  border: dashed 1px var(--color-ghost);
+}
+
+/******************************
+ * Grid layouts
+ *****************************/
+section.slide-title {
+  color: var(--color-dimmed-background);
+  background-color: var(--color-primary);
+  display: grid;
+  place-items: center;
+  grid-template:
+    "title         " auto
+    "name          " 1em
+    "...           " 1em
+    "date-and-event" 1em
+    "...           " 1em;
+}
+section.slide-title .title {
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: bold;
+  grid-area: title;
+  color: var(--color-dimmed-background);
+}
+section.slide-title .name {
+  font-weight: bolder;
+  font-size: 1.3em;
+  grid-area: name;
+  color: var(--color-dimmed-background);
+}
+section.slide-title .date-and-event {
+  font-size: 0.9em;
+  grid-area: date-and-event;
+  color: var(--color-dimmed-background);
+}
+
+section.slide-last {
+  color: var(--color-dimmed-background);
+  background-color: var(--color-primary);
+  display: grid;
+  place-items: center;
+  place-content: center;
+}
+section.slide-last h1,
+section.slide-last h2 {
+  color: var(--color-dimmed-background);
+}
+
+section.grid-5-5 {
+  display: grid;
+  grid-template:
+    "header    header" auto
+    "left      right " 1fr
+    / 50% 50%;
+}
+section.grid-5-5 h2 {
+  grid-area: header;
+}
+section.grid-5-5 .left {
+  grid-area: left;
+}
+section.grid-5-5 .right {
+  grid-area: right;
+}
+
+section.grid-2-8 {
+  display: grid;
+  grid-template:
+    "header    header" auto
+    "left      right " 1fr
+    / 20% 80%;
+}
+section.grid-2-8 h2 {
+  grid-area: header;
+}
+section.grid-2-8 .left {
+  grid-area: left;
+}
+section.grid-2-8 .right {
+  grid-area: right;
+}
+
+section.grid-cross {
+  display: grid;
+  grid-template:
+    "header    header" auto
+    "......    ......" 0.5em
+    "leftup    rightup" 1fr
+    "leftdown  rightdown" 1fr
+    / 50% 50%;
+}
+section.grid-cross h2 {
+  grid-area: header;
+}
+section.grid-cross .leftup {
+  grid-area: leftup;
+}
+section.grid-cross .rightup {
+  grid-area: rightup;
+}
+section.grid-cross .leftdown {
+  grid-area: leftdown;
+}
+section.grid-cross .rightdown {
+  grid-area: rightdown;
+}
+
+section .grid-col-2-8 {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  column-gap: 1em;
+  align-items: center;
+}
+section .grid-col-3-7 {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  column-gap: 1em;
+  align-items: center;
+}
+section .grid-col-4-6 {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  column-gap: 1em;
+  align-items: center;
+}
+section .grid-col-5-5 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  column-gap: 1em;
+  align-items: center;
+}
+section .grid-col-div-3 {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  column-gap: 5%;
+  place-items: center;
+}
+
+/******************************
+ * Flex layouts
+ *****************************/
+section .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
