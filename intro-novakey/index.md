@@ -33,15 +33,10 @@ paginate: true
     せいじ
     <small class="text-3xl font-bold">(Seiji Nakayama)</small>
   </h1>
-  <h5 class="text-dimmed">ただのVimmer</h5>
   <div class="mt-12 space-y-2 text-2xl">
     <div class="item">
       <div class="label">業務</div>
-      <span><small>バックエンド・Webの開発（たまにアプリ）</small></span>
-    </div>
-    <div class="item">
-      <div class="label">言語</div>
-      <span><small>業務 => Go, TypeScript, Kotlin, Flutter<br /> 趣味=> Haskell, Rust, Lua</small></span>
+      <span><small>緑の会社で働いています。コア技術の研究開発、サービスのバックエンド・Webの開発（たまにアプリ）</small></span>
     </div>
     <div class="item">
       <div class="label">エディタ</div>
@@ -50,7 +45,7 @@ paginate: true
     <div class="item">
       <div class="label">好き</div>
       <span>
-        Vim・ロードバイク・車<br />
+        Raycast・Vim・ロードバイク・車<br />
         <strong>シンプルで拡張性があるプロダクト</strong>
       </span>
     </div>
@@ -116,6 +111,16 @@ paginate: true
 
 <!-- _class: full lead narration-white -->
 
+## コーディングもスライド作成も司会も AI がするに
+
+# 文字変換、入力には
+
+# AI ネイティブのプロダクトがない
+
+---
+
+<!-- _class: full lead narration-white -->
+
 # novakey とは？
 
 ---
@@ -123,21 +128,34 @@ paginate: true
 ## novakey の概要
 
 - OS レベルで動作する AI 文字変換・補完サービス
-- あらゆるアプリケーションで利用可能
-- ユーザーによる AI モデル選択の自由
-  - ローカル LLM 対応
-  - クラウド LLM 対応
+
+=> AI を活用した IME
+
+---
+
+## これらを AI で & どこでも　できるようにしたい
+
+<div class="flex justify-center items-center mt-8">
+  <div>
+    IMEによる補完
+    <img src="./resources/hokan_vim.png">
+  </div>
+
+  <div>
+    cursorによる補完
+    <img src="./resources/hokan_ai.png">
+  </div>
+</div>
 
 ---
 
 ## 競合との違い
 
-| 機能         | novakey  | 従来の IME | Cursor/Copilot |
-| ------------ | -------- | ---------- | -------------- |
-| 適用範囲     | 全アプリ | 全アプリ   | 特定アプリ     |
-| AI モデル    | 自由選択 | 固定       | 固定           |
-| ローカル LLM | 対応     | 非対応     | 非対応         |
-| 入力方式     | 自由     | 固定       | 固定           |
+| 機能             | ★novakey   | 従来の IME | Cursor/Copilot |
+| ---------------- | ---------- | ---------- | -------------- |
+| 入力できるアプリ | ◎ 全アプリ | ◎ 全アプリ | ✗ 特定アプリ   |
+| AI モデル        | ◎ 自由     | ✗ なし     | △ 選択式       |
+| ローカル LLM     | ◎ 対応     | ✗ 非対応   | ✗ 非対応       |
 
 ---
 
@@ -186,8 +204,7 @@ paginate: true
 
 ## novakey のビジョン
 
-すべての人が、思考を妨げられることなく、
-スムーズに情報伝達できる世界を実現する
+思考の速度で文字を入力できる
 
 ---
 
@@ -262,8 +279,9 @@ paginate: true
 ## こんな方と一緒に開発したい
 
 - OS の低レイヤー技術に興味がある方
-- 同期的なコミュニケーションに抵抗がない方
+- 同期的なコミュニケーションに抵抗がない方(スタート以外は基本非同期)
 - 思いついたことを形にできる方
+- 楽しそうに開発する方
 
 ---
 
@@ -283,4 +301,10 @@ paginate: true
 
 <!-- _class: full lead narration-white -->
 
-# 気になった方はお声がけください！
+# 気になった方は Slack にリアクション貰えればこちらから声をかけます！
+
+---
+
+<!-- _class: full lead narration-white -->
+
+# ありがとうございました。
