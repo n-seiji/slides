@@ -39,27 +39,19 @@ paginate: true
       <span><small>バックエンド・Webの開発（たまにアプリ）</small></span>
     </div>
     <div class="item">
-      <div class="label">言語</div>
-      <span><small>業務 => Go, TypeScript, Kotlin, Flutter<br /> 趣味=> Haskell, Rust, Lua</small></span>
-    </div>
-    <div class="item">
       <div class="label">エディタ</div>
       <span>Neovim(intellijも使う)</span>
     </div>
     <div class="item">
       <div class="label">好き</div>
       <span>
-        Vim・ロードバイク・車<br />
+        Raycast・Vim・ロードバイク・車<br />
         <strong>シンプルで拡張性があるプロダクト</strong>
       </span>
     </div>
     <div class="item">
       <div class="label">特徴</div>
       <span>実家が洋菓子店</span>
-    </div>
-    <div class="item">
-      <div class="label">デバイス</div>
-      <span><small>Apple / EIZO / HHKB Studio</small></span>
     </div>
     <div class="item">
       <div class="label">サイト</div>
