@@ -32,7 +32,7 @@ paginate: true
     せいじ
     <small class="text-3xl font-bold">(Seiji Nakayama)</small>
   </h1>
-  <h5 class="text-dimmed">ただのVimmer</h5>
+  <h5 class="text-dimmed">x (@se_eiji)</h5>
   <div class="mt-12 space-y-2 text-2xl">
     <div class="item">
       <div class="label">業務</div>
