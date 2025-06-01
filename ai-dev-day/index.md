@@ -10,10 +10,10 @@ paginate: true
 <!-- _class: slide-title -->
 
 <div class="title">
-  <div>[WIP]MCPを利用するインターフェースとしてのRaycastのポテンシャル</div>
+  <div>MCPを利用するインターフェースとしてのRaycastのポテンシャル</div>
 </div>
 
-<div class="date-and-event">2024/03/21 </div>
+<div class="date-and-event">2025/06/01 </div>
 
 ---
 
@@ -85,12 +85,12 @@ paginate: true
 
 <div class="right">
 
-1. Raycastとは？
+1. Raycast とは？
 2. Raycast MCP
 3. Raycast AI Extensions
-4. Raycast AI ExtensionsとRaycast MCPを組み合わせる
-5. AI Extensionsの作り方
-6. 終わりに
+4. Raycast AI Extensions と Raycast MCP を組み合わせる
+
+5. 終わりに
 
 </div>
 
@@ -98,38 +98,30 @@ paginate: true
 
 <!-- _class: full lead narration-white -->
 
-# Raycastとは？
+# Raycast とは？
 
 ---
 
-## Raycastの概要
+## Raycast の概要
 
-- macOS用のランチャーアプリケーション
+- macOS 用のランチャーアプリケーション
 - キーボードショートカットで素早く操作可能
 - 豊富な拡張機能（Extensions）
-- カスタマイズ可能なワークフロー
-- 開発者フレンドリーな設計
+- plugin の開発も楽
 
 ---
 
-## Raycastの主な機能
+## Raycast の主な機能
 
 - アプリケーションの起動
+- アプリケーションの特定の機能の起動(★)
 - ファイル検索
-- クリップボード履歴
+- クリップボード履歴(★)
 - システムコマンドの実行
-- カスタムスクリプトの実行
-- 拡張機能による機能拡張
+- カスタムスクリプトの実行(shell, node etc...)(★)
+- 拡張機能による機能拡張(★)
 
----
-
-## Raycastの特徴
-
-- 高速な起動と検索
-- キーボード中心の操作
-- 美しいUI/UX
-- 豊富なカスタマイズ性
-- アクティブな開発者コミュニティ
+★ はデモをお見せします
 
 ---
 
@@ -143,12 +135,12 @@ paginate: true
 
 <div class="right">
 
-1. ~~Raycastとは？~~
+1. ~~Raycast とは？~~
 2. **Raycast MCP**
 3. Raycast AI Extensions
-4. Raycast AI ExtensionsとRaycast MCPを組み合わせる
-5. AI Extensionsの作り方
-6. 終わりに
+4. Raycast AI Extensions と Raycast MCP を組み合わせる
+
+5. 終わりに
 
 </div>
 
@@ -160,45 +152,20 @@ paginate: true
 
 ---
 
-## Raycast MCPの設定方法
+## Raycast MCP の設定方法
 
-- Raycastの設定からMCPを有効化
-- APIキーの設定
-- モデルの選択
-- プロンプトのカスタマイズ
-
----
-
-## Raycast MCPの詳細設定
-
-- モデル選択
-  - GPT-4
-  - GPT-3.5
-  - Claude
-  - その他のモデル
-- プロンプトテンプレート
-  - システムプロンプト
-  - ユーザープロンプト
-  - コンテキスト設定
+- Install MCP を起動
+- 必要な内容を入力
+- Install するだけ
 
 ---
 
-## Raycast MCPの使い方
+## Raycast MCP の使い方
 
-- ショートカットキーでMCPを起動
-- テキスト選択時のコンテキストメニュー
-- カスタムプロンプトの実行
-- 結果のコピーや編集
-
----
-
-## MCPの活用例
-
-- コードの説明生成
-- ドキュメントの要約
-- テキストの翻訳
-- アイデアの展開
-- 質問応答
+- 好きな方法で起動
+  - alias
+  - ショートカット
+  - AI Extensions
 
 ---
 
@@ -212,12 +179,12 @@ paginate: true
 
 <div class="right">
 
-1. ~~Raycastとは？~~
+1. ~~Raycast とは？~~
 2. ~~Raycast MCP~~
 3. **Raycast AI Extensions**
-4. Raycast AI ExtensionsとRaycast MCPを組み合わせる
-5. AI Extensionsの作り方
-6. 終わりに
+4. Raycast AI Extensions と Raycast MCP を組み合わせる
+
+5. 終わりに
 
 </div>
 
@@ -229,39 +196,12 @@ paginate: true
 
 ---
 
-## Raycast AI Extensionsの機能
+## Raycast AI Extensions の機能
 
-- カスタムAIコマンドの作成
-- プロンプトテンプレートの管理
-- 複数のAIモデルの統合
-- ワークフローの自動化
+- @メンションを使って使える機能
+  - Raycast 内なら色々なところで使える
 
----
-
-## AI Extensionsの種類
-
-- テキスト処理系
-  - 要約
-  - 翻訳
-  - 文章生成
-- コード系
-  - コード生成
-  - コードレビュー
-  - バグ修正
-- 画像系
-  - 画像生成
-  - 画像分析
-  - 画像編集
-
----
-
-## 人気のAI Extensions
-
-- AI Chat
-- AI Writer
-- AI Code
-- AI Image
-- AI Translator
+<img src="./resources/ai_extention.png" />
 
 ---
 
@@ -275,12 +215,12 @@ paginate: true
 
 <div class="right">
 
-1. ~~Raycastとは？~~
+1. ~~Raycast とは？~~
 2. ~~Raycast MCP~~
 3. ~~Raycast AI Extensions~~
-4. **Raycast AI ExtensionsとRaycast MCPを組み合わせる**
-5. AI Extensionsの作り方
-6. 終わりに
+4. **Raycast AI Extensions と Raycast MCP を組み合わせる**
+
+5. 終わりに
 
 </div>
 
@@ -288,54 +228,23 @@ paginate: true
 
 <!-- _class: full lead narration-white -->
 
-# Raycast AI ExtensionsとRaycast MCPを組み合わせる
+# Raycast AI Extensions と Raycast MCP を組み合わせる
 
 ---
 
-## YouTube動画の要約機能
+## YouTube 動画の要約機能
 
-- URLから動画情報の取得
-- MCPを使用した要約の生成
-- 結果の整形と保存
-- カスタムコマンドとしての実装
-
----
-
-## 実装例：YouTube要約機能
-
-```typescript
-import { getPreferenceValues } from "@raycast/api";
-import { youtube_v3 } from "googleapis";
-
-export default async function Command() {
-  const { apiKey } = getPreferenceValues();
-  const youtube = new youtube_v3.Youtube({ auth: apiKey });
-  
-  // 動画情報の取得
-  const videoId = "VIDEO_ID";
-  const video = await youtube.videos.list({
-    part: ["snippet", "contentDetails"],
-    id: [videoId],
-  });
-
-  // MCPを使用して要約を生成
-  const summary = await generateSummary(video.data);
-  
-  return {
-    title: "動画要約",
-    content: summary,
-  };
-}
-```
+- URL から動画情報の取得
+- youtube の動画をダウンロード
+- AI で要約
 
 ---
 
 ## その他の組み合わせ例
 
-- コードレビュー自動化
-- ドキュメント生成
-- 画像分析と説明生成
-- 多言語翻訳ワークフロー
+- 開いてる web ページの情報を取得し、要約、サイトについて AI に聞く
+- playwright で立ち上げ、操作した先の web ページをクロールしてデータを整形する
+- 調べたい情報が入った csv を入力に Firecrawl に渡し、結果をまとめて出力する
 
 ---
 
@@ -349,121 +258,30 @@ export default async function Command() {
 
 <div class="right">
 
-1. ~~Raycastとは？~~
+1. ~~Raycast とは？~~
 2. ~~Raycast MCP~~
 3. ~~Raycast AI Extensions~~
-4. ~~Raycast AI ExtensionsとRaycast MCPを組み合わせる~~
-5. **AI Extensionsの作り方**
-6. 終わりに
+4. ~~Raycast AI Extensions と Raycast MCP を組み合わせる~~
+5. **終わりに**
 
 </div>
 
 ---
 
-<!-- _class: full lead narration-white -->
+# Raycast の可能性
 
-# AI Extensionsの作り方
+- 普通なら：コードを書く必要がある
+- Raycast：すぐに形にできる、ほとんど自然言語
 
----
+MCP と AI Extension は local で llm を動かせば全部無料で使える
 
-## AI Extensionsの開発手順
-
-1. 開発環境のセットアップ
-2. プロジェクトの作成
-3. APIの実装
-4. UIの設計
-5. テストとデバッグ
-6. パッケージングと配布
-
----
-
-## 開発環境のセットアップ
-
-```bash
-# Raycast CLIのインストール
-npm install -g @raycast/api
-
-# プロジェクトの作成
-raycast create my-ai-extension
-
-# 開発サーバーの起動
-raycast dev
-```
-
----
-
-## 基本的なExtensionの構造
-
-```typescript
-import { ActionPanel, Action, List } from "@raycast/api";
-
-export default function Command() {
-  return (
-    <List>
-      <List.Item
-        title="AI機能"
-        actions={
-          <ActionPanel>
-            <Action
-              title="実行"
-              onAction={() => {
-                // AI処理の実装
-              }}
-            />
-          </ActionPanel>
-        }
-      />
-    </List>
-  );
-}
-```
-
----
-
-## デバッグとテスト
-
-- Raycastの開発者ツール
-- コンソールログの確認
-- エラーハンドリング
-- ユニットテスト
-- E2Eテスト
-
----
-
-<!-- _class: chapter-divider -->
-
-<div class="left">
-
-### Agenda
-
-</div>
-
-<div class="right">
-
-1. ~~Raycastとは？~~
-2. ~~Raycast MCP~~
-3. ~~Raycast AI Extensions~~
-4. ~~Raycast AI ExtensionsとRaycast MCPを組み合わせる~~
-5. ~~AI Extensionsの作り方~~
-6. **終わりに**
-
-</div>
-
----
-
-<!-- _class: full lead narration-white -->
-
-# ご清聴ありがとうございました！
-
-<div class="mt-8">
-  <p>質問・フィードバックをお待ちしています</p>
-</div>
+<img src="./resources/ollama.png" />
 
 ---
 
 ## 参考リンク
 
-- [Raycast公式サイト](https://www.raycast.com)
-- [Raycast APIドキュメント](https://developers.raycast.com)
+- [Raycast 公式サイト](https://www.raycast.com)
+- [Raycast API ドキュメント](https://developers.raycast.com)
 - [Raycast GitHub](https://github.com/raycast/extensions)
-- [Raycastコミュニティ](https://raycast.com/community)
+- [Raycast コミュニティ](https://raycast.com/community)
