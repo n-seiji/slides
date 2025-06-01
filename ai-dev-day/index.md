@@ -220,7 +220,19 @@ paginate: true
 
 <!-- _class: full lead narration-white -->
 
-# Raycast AI Extensions と Raycast MCP を組み合わせる
+# Raycast AI Extensions と
+
+# Raycast MCP を組み合わせる
+
+---
+
+## 組み合わせ例
+
+- 開いてる web ページの情報を取得し、要約、サイトについて AI に聞く
+- playwright で立ち上げ、操作した先の web ページをクロールしてデータを整形する
+- 調べたい情報が入った csv を入力に Firecrawl に渡し、結果をまとめて出力する
+- youtube の動画を要約する(★)
+- github の職歴を入力とし、 lapras の職歴を更新する(★)
 
 ---
 
@@ -232,11 +244,17 @@ paginate: true
 
 ---
 
-## その他の組み合わせ例
+## 職歴更新
 
-- 開いてる web ページの情報を取得し、要約、サイトについて AI に聞く
-- playwright で立ち上げ、操作した先の web ページをクロールしてデータを整形する
-- 調べたい情報が入った csv を入力に Firecrawl に渡し、結果をまとめて出力する
+- 職歴を取得
+- 内容を取得
+- lapras の MCP を使って職歴更新
+
+---
+
+## ショートカットに登録する
+
+- プロンプトを preset として登録して、好きな方法で実行する
 
 ---
 
