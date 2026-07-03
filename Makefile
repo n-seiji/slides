@@ -1,6 +1,6 @@
 MARP := marp
 
-.PHONY: new serve html pdf pptx check-deck
+.PHONY: new serve html pdf pptx preview check check-deck
 
 # 新規デッキ作成: make new NAME=my-talk [COLOR="#ff6362"]
 new:
@@ -27,3 +27,16 @@ pdf: check-deck
 
 pptx: check-deck
 	$(MARP) "$(DECK)/index.md" --pptx --allow-local-files -o "$(DECK)/index.pptx"
+
+# スライドを 1 枚ずつ PNG に出力(視覚確認用・コミットしない)
+# 出力先: <DECK>/.preview/slide.001.png ...
+preview: check-deck
+	rm -rf "$(DECK)/.preview"
+	$(MARP) "$(DECK)/index.md" --images png --allow-local-files -o "$(DECK)/.preview/slide.png"
+	@echo "出力: $(DECK)/.preview/"
+
+# 全デッキ + テンプレートがビルドできるか確認
+check:
+	@for d in */index.md; do \
+		$(MARP) "$$d" -o /dev/null 2>/dev/null && echo "OK  $$d" || { echo "NG  $$d"; exit 1; }; \
+	done

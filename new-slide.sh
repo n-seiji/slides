@@ -30,4 +30,8 @@ for f in "$name/index.md" "$name/README.md"; do
 done
 
 echo "作成しました: ./$name"
-echo "次の手順: $name/index.md のタイトルを編集 → make html DECK=$name"
+echo "次の手順:"
+echo "  1. $name/index.md を編集(見本: format-samples/index.md)"
+echo "  2. make preview DECK=$name で見た目を確認"
+echo "  3. make html DECK=$name で index.html を生成してコミット"
+echo "  4. README.md のデッキ一覧に追記"
