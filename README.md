@@ -22,7 +22,8 @@ make pptx DECK=my-talk    # pptx 生成(コミットしない)
 
 - `themes/mamansoft.css` — 共通テーマ(唯一の正)。デッキ固有の色は `index.md` 内で `--color-primary` を上書き
 - `template/` — 新規デッキの雛形(`new-slide.sh` がコピーして placeholder を置換)
-- `docs/format-catalog.md` — 使えるスライドフォーマットの一覧
+- `format-samples/` — ページパターンの見本集(1 スライド = 1 パターン、コピペ用)
+- `docs/format-catalog.md` — 使えるスライドフォーマット(CSS クラス)の一覧
 - `<デッキ名>/` — 各発表。`index.md`(原稿)/ `index.html`(ビルド成果物)/ `resources/`(画像)
 
 ## スライド作成のヒント

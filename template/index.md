@@ -76,8 +76,8 @@ paginate: true
 ## セクション 1
 
 - 本文はここに書く
-- 2 カラムが必要なら `grid-5-5` / `grid-2-8`、要素内カラムは `grid-col-*`
-- フォーマット一覧: `docs/format-catalog.md`
+- ページパターンの見本: `format-samples/index.md` からコピペ
+- フォーマット(CSS クラス)一覧: `docs/format-catalog.md`
 
 ---
 

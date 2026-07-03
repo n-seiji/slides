@@ -12,7 +12,8 @@ Marp 製スライドのリポジトリ。1 ディレクトリ = 1 発表デッ�
 
 - テーマは `themes/mamansoft.css` が唯一の正。**デッキに CSS をコピーしない**
 - デッキ固有の primary 色は `index.md` 冒頭の `<style>:root { --color-primary: ... }</style>` で上書き
-- 使えるフォーマットは `docs/format-catalog.md` を参照。新フォーマットが必要なら
+- ページパターンの見本は `format-samples/`(1 スライド = 1 パターン、コピペして使う)
+- 使えるフォーマット(CSS クラス)は `docs/format-catalog.md` を参照。新フォーマットが必要なら
   デッキ内 `<style scoped>` で済ませず、汎用性があるものはテーマに追加してカタログも更新する
 - 画像は各デッキの `resources/` に置く
 - `index.html` はコミット対象。`index.md` を編集したら `make html DECK=<name>` で再生成してからコミット
