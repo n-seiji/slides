@@ -1,6 +1,6 @@
 MARP := marp
 
-.PHONY: new serve html pdf pptx preview check check-deck
+.PHONY: new serve html pdf pptx preview check index check-deck
 
 # 新規デッキ作成: make new NAME=my-talk [COLOR="#ff6362"]
 new:
@@ -34,6 +34,10 @@ preview: check-deck
 	rm -rf "$(DECK)/.preview"
 	$(MARP) "$(DECK)/index.md" --images png --allow-local-files -o "$(DECK)/.preview/slide.png"
 	@echo "出力: $(DECK)/.preview/"
+
+# GitHub Pages のトップページ(デッキ一覧)を生成
+index:
+	./generate-index.sh
 
 # 全デッキ + テンプレートがビルドできるか確認
 check:

@@ -11,6 +11,7 @@ Marp 製スライドのリポジトリ。1 ディレクトリ = 1 発表デッ�
 | HTML 生成(コミット対象) | `make html DECK=<name>` |
 | スライドを PNG に出力(視覚確認用) | `make preview DECK=<name>` → `<name>/.preview/slide.001.png ...` |
 | プレビューサーバ(人間用) | `make serve` |
+| Pages トップページ再生成 | `make index`(デッキの追加・改名・README 変更時) |
 | PDF / pptx | `make pdf DECK=<name>` / `make pptx DECK=<name>` |
 
 ## スライド編集のワークフロー
@@ -19,7 +20,8 @@ Marp 製スライドのリポジトリ。1 ディレクトリ = 1 発表デッ�
    (1 スライド = 1 パターン、冒頭コメントがパターン名。CSS クラスの詳細は `docs/format-catalog.md`)
 2. 編集したら `make preview DECK=<name>` で PNG を生成し、**Read ツールで画像を見て崩れを確認する**
 3. 問題なければ `make html DECK=<name>` で index.html を再生成してコミット
-4. 新規デッキの場合は `README.md` のデッキ一覧にも追記する
+4. 新規デッキの場合は `README.md` のデッキ一覧に追記し、`make index` で
+   GitHub Pages のトップページ(ルート `index.html`)を再生成してコミットする
 
 ## 構成と規約
 

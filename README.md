@@ -2,6 +2,9 @@
 
 Marp 製のスライド置き場。1 ディレクトリ = 1 発表。
 
+公開ページ: https://n-seiji.github.io/slides/(main ブランチのルートを GitHub Pages で配信。
+トップページは `make index` で生成)
+
 ## デッキ一覧
 
 | デッキ | タイトル | イベント / 日付 |
