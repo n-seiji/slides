@@ -180,8 +180,8 @@ paginate: true
 <div>
 
 ```sh
-make new NAME=my-talk
-make html DECK=my-talk
+mise run new my-talk
+mise run html my-talk
 ```
 
 </div>

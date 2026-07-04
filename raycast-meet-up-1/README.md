@@ -5,4 +5,4 @@
 
 ## ビルド
 
-リポジトリルートで `make html DECK=raycast-meet-up-1`
+リポジトリルートで `mise run html raycast-meet-up-1`

@@ -9,5 +9,5 @@
 リポジトリルートで:
 
 ```bash
-make html DECK={{TITLE}}
+mise run html {{TITLE}}
 ```

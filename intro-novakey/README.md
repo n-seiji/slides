@@ -5,4 +5,4 @@
 
 ## ビルド
 
-リポジトリルートで `make html DECK=intro-novakey`
+リポジトリルートで `mise run html intro-novakey`

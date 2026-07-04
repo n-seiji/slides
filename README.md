@@ -3,7 +3,7 @@
 Marp 製のスライド置き場。1 ディレクトリ = 1 発表。
 
 公開ページ: https://n-seiji.github.io/slides/(main ブランチのルートを GitHub Pages で配信。
-トップページは `make index` で生成)
+トップページは `mise run index` で生成)
 
 ## デッキ一覧
 
@@ -14,22 +14,29 @@ Marp 製のスライド置き場。1 ディレクトリ = 1 発表。
 | [intro-novakey](intro-novakey/) | novakey: 開発者募集 | novakey 紹介 / 2024/03/21 |
 | [format-samples](format-samples/) | ページパターン見本集(コピペ用) | — |
 
+## セットアップ
+
+タスクランナーは [mise](https://mise.jdx.dev/) を使う(要: `marp` CLI)。初回のみ:
+
+```bash
+mise trust
+```
+
 ## 新規デッキ作成
 
 ```bash
-make new NAME=my-talk COLOR="#ff6362"   # COLOR 省略可(デフォルト #ff6362)
-# または ./new-slide.sh my-talk "#ff6362"
+mise run new my-talk "#ff6362"   # 色は省略可(デフォルト #ff6362)
 ```
 
 ## プレビュー / ビルド
 
 ```bash
-make serve                  # 全体プレビュー (marp -s .)
-make check                  # 全デッキがビルドできるか確認
-make html DECK=my-talk      # index.html 生成(コミット対象)
-make preview DECK=my-talk   # スライドを 1 枚ずつ PNG 出力(my-talk/.preview/)
-make pdf DECK=my-talk       # PDF 生成(コミットしない)
-make pptx DECK=my-talk      # pptx 生成(コミットしない)
+mise run serve             # 全体プレビュー (marp -s .)
+mise run check             # 全デッキがビルドできるか確認
+mise run html my-talk      # index.html 生成(コミット対象)
+mise run preview my-talk   # スライドを 1 枚ずつ PNG 出力(my-talk/.preview/)
+mise run pdf my-talk       # PDF 生成(コミットしない)
+mise run pptx my-talk      # pptx 生成(コミットしない)
 ```
 
 ## 構成

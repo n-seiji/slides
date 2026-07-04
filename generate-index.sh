@@ -1,6 +1,6 @@
 #!/bin/sh
 # 各デッキの README.md からトップページ index.html を生成する
-# 使い方: ./generate-index.sh (または make index)
+# 使い方: ./generate-index.sh (または mise run index)
 set -eu
 
 cd "$(dirname "$0")"

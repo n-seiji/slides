@@ -5,4 +5,4 @@
 
 ## ビルド
 
-リポジトリルートで `make html DECK=ai-dev-day`
+リポジトリルートで `mise run html ai-dev-day`

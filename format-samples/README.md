@@ -2,7 +2,7 @@
 
 スライドのページパターン見本集。1 スライド = 1 パターン(全 14 種)。
 
-- `make serve` で見た目を確認しながら、必要なスライドを自分のデッキにコピペする
+- `mise run serve` で見た目を確認しながら、必要なスライドを自分のデッキにコピペする
 - 各スライド冒頭のコメントがパターン名
 - 部品(CSS クラス)単位の説明は `docs/format-catalog.md` を参照
 
@@ -25,4 +25,4 @@
 
 ## ビルド
 
-リポジトリルートで `make html DECK=format-samples`
+リポジトリルートで `mise run html format-samples`

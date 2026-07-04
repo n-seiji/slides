@@ -6,21 +6,21 @@ Marp 製スライドのリポジトリ。1 ディレクトリ = 1 発表デッ�
 
 | 目的 | コマンド |
 |------|---------|
-| 新規デッキ作成 | `make new NAME=<name> COLOR="#xxxxxx"` |
-| 全デッキのビルド確認 | `make check` |
-| HTML 生成(コミット対象) | `make html DECK=<name>` |
-| スライドを PNG に出力(視覚確認用) | `make preview DECK=<name>` → `<name>/.preview/slide.001.png ...` |
-| プレビューサーバ(人間用) | `make serve` |
-| Pages トップページ再生成 | `make index`(デッキの追加・改名・README 変更時) |
-| PDF / pptx | `make pdf DECK=<name>` / `make pptx DECK=<name>` |
+| 新規デッキ作成 | `mise run new <name> "#xxxxxx"` |
+| 全デッキのビルド確認 | `mise run check` |
+| HTML 生成(コミット対象) | `mise run html <name>` |
+| スライドを PNG に出力(視覚確認用) | `mise run preview <name>` → `<name>/.preview/slide.001.png ...` |
+| プレビューサーバ(人間用) | `mise run serve` |
+| Pages トップページ再生成 | `mise run index`(デッキの追加・改名・README 変更時) |
+| PDF / pptx | `mise run pdf <name>` / `mise run pptx <name>` |
 
 ## スライド編集のワークフロー
 
 1. ページパターンの見本 `format-samples/index.md` から必要なスライドをコピーして編集する
    (1 スライド = 1 パターン、冒頭コメントがパターン名。CSS クラスの詳細は `docs/format-catalog.md`)
-2. 編集したら `make preview DECK=<name>` で PNG を生成し、**Read ツールで画像を見て崩れを確認する**
-3. 問題なければ `make html DECK=<name>` で index.html を再生成してコミット
-4. 新規デッキの場合は `README.md` のデッキ一覧に追記し、`make index` で
+2. 編集したら `mise run preview <name>` で PNG を生成し、**Read ツールで画像を見て崩れを確認する**
+3. 問題なければ `mise run html <name>` で index.html を再生成してコミット
+4. 新規デッキの場合は `README.md` のデッキ一覧に追記し、`mise run index` で
    GitHub Pages のトップページ(ルート `index.html`)を再生成してコミットする
 
 ## 構成と規約
