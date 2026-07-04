@@ -1,5 +1,6 @@
 ---
 theme: mamansoft
+title: Raycastを育てよう！
 _class: lead
 paginate: true
 ---

@@ -1,5 +1,6 @@
 ---
 theme: mamansoft
+title: ページパターン見本集
 _class: lead
 paginate: true
 ---
