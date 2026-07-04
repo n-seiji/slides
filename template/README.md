@@ -9,5 +9,5 @@
 リポジトリルートで:
 
 ```bash
-make html DECK=<このディレクトリ名>
+make html DECK={{TITLE}}
 ```

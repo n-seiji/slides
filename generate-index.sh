@@ -64,11 +64,15 @@ rows=$(
 <ul>
 HEADER
 
+  escape_html() {
+    printf '%s' "$1" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g'
+  }
+
   printf '%s\n' "$rows" | while IFS='|' read -r date dir title event; do
     meta="$event"
     [ "$date" != "0000/00/00" ] && meta="${event:+$event / }$date"
-    printf '  <li><a href="%s/">%s</a>\n' "$dir" "$title"
-    [ -n "$meta" ] && printf '    <div class="meta">%s</div>\n' "$meta"
+    printf '  <li><a href="%s/">%s</a>\n' "$dir" "$(escape_html "$title")"
+    [ -n "$meta" ] && printf '    <div class="meta">%s</div>\n' "$(escape_html "$meta")"
     printf '  </li>\n'
   done
 

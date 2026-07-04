@@ -21,12 +21,13 @@ fi
 
 cp -R template "$name"
 
+# perl -pi は BSD/GNU 両対応(sed -i は両者で構文が異なるため使わない)
 for f in "$name/index.md" "$name/README.md"; do
-  sed -i '' \
-    -e "s|{{TITLE}}|$name|g" \
-    -e "s|{{DATE}}|$date|g" \
-    -e "s|{{COLOR}}|$color|g" \
-    "$f"
+  TITLE="$name" DATE="$date" COLOR="$color" perl -pi -e '
+    s/\{\{TITLE\}\}/$ENV{TITLE}/g;
+    s/\{\{DATE\}\}/$ENV{DATE}/g;
+    s/\{\{COLOR\}\}/$ENV{COLOR}/g;
+  ' "$f"
 done
 
 echo "作成しました: ./$name"
