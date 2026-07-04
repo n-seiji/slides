@@ -1,5 +1,6 @@
 ---
 theme: mamansoft
+title: MCPを利用するインターフェースとしてのRaycastのポテンシャル
 _class: lead
 paginate: true
 ---

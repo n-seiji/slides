@@ -1,5 +1,6 @@
 ---
 theme: mamansoft
+title: {{TITLE}}
 _class: lead
 paginate: true
 ---

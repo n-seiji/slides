@@ -1,5 +1,6 @@
 ---
 theme: mamansoft
+title: novakey: 開発者募集
 _class: lead
 paginate: true
 ---
