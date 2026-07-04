@@ -5,7 +5,7 @@
 :root {
   --color-foreground: #cbcbcb;
   --color-background: #000000;
-  --color-primary: #3db680;
+  --color-primary: #ff6362;
   --color-secondary: #ce579b;
   --color-dimmed-background: #f8f6f1;
   --color-ghost: #47484c;
@@ -230,16 +230,6 @@ section.narration-white > p {
   font-weight: bold;
   /* background-color: #00000080; */
 }
-/* 暗転背景にテキスト */
-section.text-dimmed-background * {
-  color: var(--color-dimmed-background);
-}
-/* ヘッダなしテーブル */
-section.headless-table table thead th {
-  border-bottom-color: var(--color-dimmed);
-  border-bottom-width: 1px;
-}
-
 /******************************
  * その他
  *****************************/
@@ -264,6 +254,13 @@ section img[alt~="secondary"] {
   filter: var(--color-filter-secondary);
 }
 
+/* 自己紹介などの行レイアウト(ラベル + テキスト) */
+section .item {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+
 section .label {
   font-size: 0.7em;
   color: var(--color-dimmed-background);
@@ -273,19 +270,6 @@ section .label {
   width: 8em;
   height: 2em;
   border-radius: 4px;
-}
-
-/* 画面右上に補足 */
-section .tag-note {
-  font-size: 0.5em;
-  padding: 0.2em 0.4em;
-  font-weight: bold;
-  filter: opacity(0.85);
-  color: var(--color-dimmed-background);
-  background-color: var(--color-secondary);
-  position: absolute;
-  top: 0.5em;
-  right: 0.5em;
 }
 
 /******************************
@@ -465,31 +449,6 @@ section.grid-2-8 .right {
   grid-area: right;
 }
 
-section.grid-cross {
-  display: grid;
-  grid-template:
-    "header    header" auto
-    "......    ......" 0.5em
-    "leftup    rightup" 1fr
-    "leftdown  rightdown" 1fr
-    / 50% 50%;
-}
-section.grid-cross h2 {
-  grid-area: header;
-}
-section.grid-cross .leftup {
-  grid-area: leftup;
-}
-section.grid-cross .rightup {
-  grid-area: rightup;
-}
-section.grid-cross .leftdown {
-  grid-area: leftdown;
-}
-section.grid-cross .rightdown {
-  grid-area: rightdown;
-}
-
 section .grid-col-2-8 {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -513,12 +472,6 @@ section .grid-col-5-5 {
   grid-template-columns: 50% 50%;
   column-gap: 1em;
   align-items: center;
-}
-section .grid-col-div-3 {
-  display: grid;
-  grid-template-columns: 30% 30% 30%;
-  column-gap: 5%;
-  place-items: center;
 }
 
 /******************************

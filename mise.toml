@@ -1,0 +1,47 @@
+[tasks.new]
+description = "新規デッキ作成: mise run new <デッキ名> [primary色]"
+usage = '''
+arg "<name>" help="デッキ名"
+arg "[color]" help="primary色" default="#ff6362"
+'''
+run = './new-slide.sh "$usage_name" "$usage_color"'
+
+[tasks.serve]
+description = "全体プレビューサーバ (marp -s .)"
+run = "marp -s ."
+
+[tasks.html]
+description = "index.html 生成(コミット対象): mise run html <デッキ名>"
+usage = 'arg "<deck>" help="デッキ名"'
+run = 'marp "$usage_deck/index.md" -o "$usage_deck/index.html"'
+
+[tasks.pdf]
+description = "PDF 生成(コミットしない): mise run pdf <デッキ名>"
+usage = 'arg "<deck>" help="デッキ名"'
+run = 'marp "$usage_deck/index.md" --pdf --allow-local-files -o "$usage_deck/index.pdf"'
+
+[tasks.pptx]
+description = "pptx 生成(コミットしない): mise run pptx <デッキ名>"
+usage = 'arg "<deck>" help="デッキ名"'
+run = 'marp "$usage_deck/index.md" --pptx --allow-local-files -o "$usage_deck/index.pptx"'
+
+[tasks.preview]
+description = "スライドを 1 枚ずつ PNG 出力(視覚確認用): mise run preview <デッキ名>"
+usage = 'arg "<deck>" help="デッキ名"'
+run = '''
+rm -rf "$usage_deck/.preview"
+marp "$usage_deck/index.md" --images png --allow-local-files -o "$usage_deck/.preview/slide.png"
+echo "出力: $usage_deck/.preview/"
+'''
+
+[tasks.check]
+description = "全デッキ + テンプレートがビルドできるか確認"
+run = '''
+for d in */index.md; do
+  marp "$d" -o /dev/null 2>/dev/null && echo "OK  $d" || { echo "NG  $d"; exit 1; }
+done
+'''
+
+[tasks.index]
+description = "GitHub Pages のトップページ(デッキ一覧)を生成"
+run = "./generate-index.sh"

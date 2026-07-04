@@ -7,6 +7,12 @@ paginate: true
 <script src="https://cdn.tailwindcss.com/3.4.4"></script>
 <script>tailwind.config = { corePlugins: { preflight: false } }</script>
 
+<style>
+:root {
+  --color-primary: #457EF7;
+}
+</style>
+
 <!-- _class: slide-title -->
 
 <div class="title">

@@ -1,0 +1,5 @@
+# ビルド一時成果物(index.html はコミット対象のため除外しない)
+*.pdf
+*.pptx
+.preview/
+.DS_Store
