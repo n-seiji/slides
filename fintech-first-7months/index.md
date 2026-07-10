@@ -106,8 +106,12 @@ section h1 { color: #fff; }
       <span>株式会社miive</span>
     </div>
     <div class="item">
+      <div class="label">会社の特徴</div>
+      <span>金曜日は「よい週末を！」って言う</span>
+    </div>
+    <div class="item">
       <div class="label">業界歴</div>
-      <span>フィンテック <strong>7ヶ月</strong></span>
+      <span><strong>7ヶ月</strong></span>
     </div>
     <div class="item">
       <div class="label">業務</div>
@@ -123,10 +127,6 @@ section h1 { color: #fff; }
     <div class="item">
       <div class="label">特徴</div>
       <span>実家が洋菓子店</span>
-    </div>
-    <div class="item">
-      <div class="label">会社の特徴</div>
-      <span>金曜日は「よい週末を！」って言う</span>
     </div>
     <div class="item">
       <div class="label">サイト</div>
@@ -165,8 +165,8 @@ section h1 { color: #fff; }
 
 ## 遡ること2年前、#welcome_fintech に参加
 
-<div class="flex justify-center items-center">
-  <img class="h-[460px]" src="./resources/welcome-fintech-3.jpeg">
+<div class="flex justify-center items-center mt-10">
+  <img class="h-[440px]" src="./resources/welcome-fintech-3.jpeg">
 </div>
 
 ---
