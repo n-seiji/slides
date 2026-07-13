@@ -104,7 +104,7 @@ section.narration-white > p {
 
 ---
 
-## イベントが好き
+## イベントとかも好き
 
 **[Raycast Community Japan](https://devx.jp/rct)** の運営もしてたりしてます。
 
@@ -128,9 +128,9 @@ section.narration-white > p {
 
 **PMM JAPAN CONFERENCE 2026**
 
-守谷さんのお話、めっちゃ面白かったです。
+守屋さんのお話、めっちゃ面白かったです。
 
-<u>**LayerX の方、誰か紹介してください mm**</u>
+<u>**LayerXのどなたか。<br>守屋さんをご紹介いただきたいです mm**</u>
 
 </div>
 </div>
@@ -157,31 +157,29 @@ section.narration-white > p {
 
 <!-- _class: full lead narration-white -->
 
-イベントを通して「もしかしたら、こわくないかも」ってなった
+イベントを通して
+
+# 「もしかしたら、こわくないかも」
+
+ってなった
 
 ---
 
 <!-- _class: full lead narration-white -->
 
+<style scoped>
+section { padding-bottom: 3em; }
+</style>
+
 ###### 今日話すこと
 
-# 実際に入ってみて、<br>Fintechって怖くなかった
+# 実際に入ってみて<br>Fintechって怖くなかった
 
 ---
 
-## そこから
+<!-- _class: full lead narration-white -->
 
-転職を考え始め、SmartBank さんのカジュアル面談などもお願いした。
-
-からの、色々あって今の会社 **miive** に。
-
----
-
-## miive！
-
-<div class="flex justify-center items-center">
-  <img class="h-[500px]" src="./resources/miive-card.png">
-</div>
+改めて、<span style="color: var(--color-primary); font-weight: bold;">miive</span> の中山です。
 
 ---
 
@@ -191,31 +189,56 @@ section.narration-white > p {
 - 管理者(企業側)が制度をつくる
 - 従業員はアプリで確認 & <u>**カードで支払う**</u>ことで福利厚生を使える
 
----
+簡単にいうと<strong>「今の福利厚生、使いづらいから使いやすくしようぜ！」</strong>というサービス。
 
-## ex. ピってやったら半額、会社から補助がでる
-
-<div class="flex justify-center items-center gap-8 mt-8">
-  <img class="h-[420px]" src="./resources/miive-card.png">
-  <div class="text-6xl font-bold" style="color: var(--color-primary);">→</div>
-  <img class="h-[420px]" src="./resources/conbini-pay.jpeg">
+<div class="flex justify-center items-center mt-4">
+  <img class="h-[280px]" src="./resources/miive-card.png">
 </div>
 
 ---
 
-## 入社してからやってたこと
+## ポイントとマネー
 
-1〜5ヶ月目は、**サービス開発**、**問い合わせの調査**。
+会社から付与される<strong>「ポイント」</strong>と、ユーザー自身がチャージする<strong>「マネー」</strong>がある。
 
-<!-- TODO: ギュッと略歴を載せる(オンボ→管理者画面→チーム再編 など1行ずつ) -->
+ポイントが使えるお店で「ピッ」ってすると、
 
-ここ2ヶ月で、<u>**決済に関わる部分**</u>にも手を入れ始めた。
+例えば、<u>**半分はポイントから、半分はマネーから引かれる**</u>。
+
+<div class="flex justify-center items-center gap-8 mt-4">
+  <img class="h-[230px]" src="./resources/miive-card.png">
+  <div class="text-5xl font-bold" style="color: var(--color-primary);">→</div>
+  <img class="h-[230px]" src="./resources/conbini-pay.jpeg">
+</div>
+
+---
+
+## 入社してからやってたこと(私の場合)
+
+- **web やアプリが中心のサービス開発**
+- **顧客からの問い合わせ対応** 
+<br>→ <u>**少しずつ決済に触れる**</u>。
+
+決済をしっかり触ったのは、**ここ2ヶ月ぐらい**。
 
 ---
 
 <!-- _class: full lead narration-white -->
 
 # 決済、めっちゃたのしい
+
+---
+
+## 楽しいポイント 0: 前提、意味がわからない概念が登場する
+
+| 概念             | ざっくり言うと                                             |
+| ---------------- | ---------------------------------------------------------- |
+| オーソリ         | 店舗で支払った瞬間に飛んでくる「利用予定」の通知(与信枠の確保) |
+| クリアリング     | 後日届く「売上確定」の情報。ここで金額が変わることも       |
+| リコンサイル     | 記録同士を突き合わせて、ズレがないか確認する作業           |
+| イシュア         | カードを発行する側。miive はここ                           |
+| アクワイアラ     | 加盟店(お店)を管理する側                                   |
+| チャージバック   | 不正利用などで、決済を取り消してお金を取り返す仕組み       |
 
 ---
 
@@ -250,25 +273,30 @@ Visa の他にも ISMS や PCI DSS など、色々な基準がある。**むず�
 
 ---
 
-## 自分はこんなことをやってた
+## ここ2ヶ月、自分はこんなことやってた
 
 - 曜日や時間帯で**決済を制限**
-- **上限金額**を設定
+  - 会社が意図した時間外での決済では、ポイントが使えなくなる
+- **ポイント利用上限**を設定
+  - 一回の決済で使えるポイントの上限金額を制限する(一気にポイントを使い切らないように)
 
 簡単に見えるが、<u>**落とし穴だらけ**</u>。
 
 ---
 
-## 実装前の認識
+## 「曜日や時間帯で決済を制限」機能の場合
 
-- オーソリ(店舗で支払った瞬間に飛んでくる、利用予定の通知)が来た時の情報で判断すればいいんでしょ？**秒じゃん。**
+実装前:「オーソリが来た時の情報で判断すればいいんでしょ？**秒じゃん。**」
 
-<div class="text-center text-5xl font-bold mt-6 mb-6" style="color: var(--color-primary);">↓ 実際</div>
+<div class="text-center text-4xl font-bold mt-4 mb-4" style="color: var(--color-primary);">↓ 実際</div>
 
-- オーソリだけじゃない、<u>**クリアリングでも判断が必要**</u>
-- クリアリング時には**決済した日時が入ってない場合もある**！？
-- **追加徴収**のクリアリングが来た場合 & 元取引が見つからなかったらどうする？
-- 顧客 & ビジネスサイドに**どう説明する**？
+- オーソリだけじゃない、<u>**クリアリングでも判断が必要**</u>。
+
+- **決済した日時が入ってない**クリアリングもある！？
+
+- **追加徴収** & 元取引が見つからない場合、どうする？
+
+- オーソリ、クリアリングの場合の仕様を、顧客・ビジネスサイドに**どう説明する**？
 
 ---
 
@@ -296,7 +324,15 @@ Visa の他にも ISMS や PCI DSS など、色々な基準がある。**むず�
 
 <!-- _class: full lead narration-white -->
 
-ただ、俯瞰してみると、、、
+決済、やっぱり怖いかもしれない、、、むずい。。。
+
+###### お金なにかあったら怖い。。。
+
+---
+
+<!-- _class: full lead narration-white -->
+
+ただ、俯瞰してみると...
 
 ---
 
@@ -306,7 +342,7 @@ Visa の他にも ISMS や PCI DSS など、色々な基準がある。**むず�
 
 ---
 
-## 本当にやってることはおんなじ
+## 極論、通常のサービス開発
 
 <style scoped>
 .flow { display: flex; justify-content: center; align-items: center; gap: 0.6em; margin-top: 1.2em; }
@@ -337,7 +373,7 @@ Visa の他にも ISMS や PCI DSS など、色々な基準がある。**むず�
 </div>
 
 <div class="flow">
-  <div class="step">考える<small>要望・制約の落としどころ</small></div>
+  <div class="step">考える<small>課題深堀り<br>要望・制約の落としどころ</small></div>
   <div class="arrow">→</div>
   <div class="step">作る<small>設計・実装</small></div>
   <div class="arrow">→</div>
@@ -385,9 +421,7 @@ Visa の他にも ISMS や PCI DSS など、色々な基準がある。**むず�
 
 <!-- _class: full lead narration-white -->
 
-# お化けだと思ってたけど、<br>実際知ってみたらなんてことない
-
-###### Fintech、ｺﾜｸﾅｲﾖ
+# 知ると、Fintech ｺﾜｸﾅｲﾖ
 
 ---
 
