@@ -1,6 +1,8 @@
 ---
 theme: mamansoft
 title: Fintech ｺﾜｸﾅｲﾖ
+url: https://n-seiji.github.io/slides/fintech-first-7months/
+image: https://n-seiji.github.io/slides/fintech-first-7months/resources/ogp.png
 _class: lead
 paginate: true
 ---
