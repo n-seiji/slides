@@ -1,4 +1,4 @@
-# Fintech怖くないよ
+# Fintech ｺﾜｸﾅｲﾖ
 
 - イベント: Welcome Fintech #6 夏の大トーク大会
 - 日付: 2026/07/13

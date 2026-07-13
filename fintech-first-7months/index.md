@@ -1,6 +1,6 @@
 ---
 theme: mamansoft
-title: Fintech怖くないよ
+title: Fintech ｺﾜｸﾅｲﾖ
 _class: lead
 paginate: true
 ---
@@ -24,7 +24,7 @@ section.narration-white > p {
 <!-- _class: slide-title -->
 
 <div class="title">
-  <div>Fintech怖くないよ</div>
+  <div>Fintech ｺﾜｸﾅｲﾖ</div>
 </div>
 <div class="name">Seiji Nakayama</div>
 <div class="date-and-event">2026/07/13 Welcome Fintech #6 夏の大トーク大会</div>
@@ -95,8 +95,9 @@ section.narration-white > p {
 2025/11 より前は、ナビゲーションの会社にいました。
 
 - 物流系のサービス開発
-- 新規事業の 0→1 開発
-- 地図の配信システム開発、SRE
+- サッカーに関する新規事業の 0→1 開発
+- 地図の配信システム開発
+- SRE
 - 一瞬 POS システムの開発にも
 
 詳しくは => [sijis.me](https://sijis.me)
@@ -105,19 +106,34 @@ section.narration-white > p {
 
 ## イベントが好き
 
-**Raycast Community Japan** の運営もしてたりしてます。
+**[Raycast Community Japan](https://devx.jp/rct)** の運営もしてたりしてます。
 
-<!-- TODO: イベントのロゴ・写真があれば入れる -->
+<div class="flex justify-center items-center mt-6">
+  <img class="h-[420px]" src="./resources/raycast-community-japan.jpeg">
+</div>
 
 ---
 
-## 今日も日中、別のイベントに参加してました
+## 余談: 今日も日中、別のイベントに参加してました
+
+<div class="grid-col-5-5 mt-8">
+<div>
+
+<div class="flex justify-center items-center">
+  <img class="h-[400px]" src="./resources/pmm-conf.png">
+</div>
+
+</div>
+<div class="mt-10">
+
+**PMM JAPAN CONFERENCE 2026**
 
 守谷さんのお話、めっちゃ面白かったです。
 
-**誰か紹介してください mm**
+<u>**LayerX の方、誰か紹介してください mm**</u>
 
-<!-- TODO: イベント名・スクショを入れる -->
+</div>
+</div>
 
 ---
 
@@ -141,15 +157,15 @@ section.narration-white > p {
 
 <!-- _class: full lead narration-white -->
 
-ただ、もしかしたら Fintech って怖くないかもしれない、、、？
+イベントを通して「もしかしたら、こわくないかも」ってなった
 
 ---
 
 <!-- _class: full lead narration-white -->
 
-# Fintechって、怖くなかった
-
 ###### 今日話すこと
+
+# 実際に入ってみて、<br>Fintechって怖くなかった
 
 ---
 
@@ -371,7 +387,7 @@ Visa の他にも ISMS や PCI DSS など、色々な基準がある。**むず�
 
 # お化けだと思ってたけど、<br>実際知ってみたらなんてことない
 
-###### Fintech、怖くないよ
+###### Fintech、ｺﾜｸﾅｲﾖ
 
 ---
 
