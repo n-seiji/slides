@@ -12,7 +12,7 @@ Marp 製のスライド置き場。1 ディレクトリ = 1 発表。
 | [raycast-meet-up-1](raycast-meet-up-1/) | Raycastを育てよう！ | Raycast Meetup Japan #1 / 2025/02/21 |
 | [ai-dev-day](ai-dev-day/) | MCPを利用するインターフェースとしてのRaycastのポテンシャル | AI dev day / 2025/06/01 |
 | [intro-novakey](intro-novakey/) | novakey: 開発者募集 | novakey 紹介 / 2024/03/21 |
-| [fintech-first-7months](fintech-first-7months/) | Fintechは地続きだった | Welcome Fintech #6 / 2026/07/13 |
+| [fintech-first-7months](fintech-first-7months/) | Fintech怖くないよ | Welcome Fintech #6 / 2026/07/13 |
 | [format-samples](format-samples/) | ページパターン見本集(コピペ用) | — |
 
 ## セットアップ

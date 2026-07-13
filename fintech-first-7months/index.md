@@ -1,6 +1,6 @@
 ---
 theme: mamansoft
-title: Fintechは地続きだった
+title: Fintech怖くないよ
 _class: lead
 paginate: true
 ---
@@ -24,63 +24,10 @@ section.narration-white > p {
 <!-- _class: slide-title -->
 
 <div class="title">
-  <div>Fintechは地続きだった</div>
+  <div>Fintech怖くないよ</div>
 </div>
 <div class="name">Seiji Nakayama</div>
 <div class="date-and-event">2026/07/13 Welcome Fintech #6 夏の大トーク大会</div>
-
----
-
-<!-- _class: full lead narration-white -->
-
-# Welcome Fintech #6
-
-# 夏の大トーク大会ーーー！！！
-
-<!-- タイトルコール。全力で読み上げる -->
-
----
-
-<!-- _class: full lead narration-white -->
-
-皆さん、夏ですね！
-
----
-
-<!-- _class: full lead narration-white -->
-
-夏といえば、、、？
-
----
-
-<!-- _class: full lead narration-white -->
-
-# 海！
-
----
-
-<!-- _class: full lead narration-white -->
-
-# 海といえば、青！
-
----
-
-<!-- _class: full lead -->
-
-<style scoped>
-section { background: #61ccbe; }
-section h1 { color: #fff; }
-</style>
-
-# 青といえば、miive！
-
----
-
-## miive！
-
-<div class="flex justify-center items-center">
-  <img class="h-[500px]" src="./resources/miive-card.png">
-</div>
 
 ---
 
@@ -118,15 +65,16 @@ section h1 { color: #fff; }
       <span><small>バックエンド・Web・アプリ開発</small></span>
     </div>
     <div class="item">
-      <div class="label">好き</div>
-      <span>
-        Raycast・Vim・ロードバイク<br />
-        <strong>シンプルで拡張性があるプロダクト</strong>
-      </span>
+      <div class="label">性格</div>
+      <span>好奇心旺盛</span>
     </div>
     <div class="item">
-      <div class="label">特徴</div>
-      <span>実家が洋菓子店</span>
+      <div class="label">苦手なもの</div>
+      <span>おばけ</span>
+    </div>
+    <div class="item">
+      <div class="label">好き</div>
+      <span>Raycast・Vim・ロードバイク</span>
     </div>
     <div class="item">
       <div class="label">サイト</div>
@@ -142,7 +90,7 @@ section h1 { color: #fff; }
 
 ---
 
-## 経歴
+## 経歴(色々やってる)
 
 2025/11 より前は、ナビゲーションの会社にいました。
 
@@ -155,11 +103,21 @@ section h1 { color: #fff; }
 
 ---
 
-<!-- _class: full lead narration-white -->
+## イベントが好き
 
-<!-- 改めてのタイトルコール -->
+**Raycast Community Japan** の運営もしてたりしてます。
 
-# 「Fintechは地続きだった」
+<!-- TODO: イベントのロゴ・写真があれば入れる -->
+
+---
+
+## 今日も日中、別のイベントに参加してました
+
+守谷さんのお話、めっちゃ面白かったです。
+
+**誰か紹介してください mm**
+
+<!-- TODO: イベント名・スクショを入れる -->
 
 ---
 
@@ -183,9 +141,15 @@ section h1 { color: #fff; }
 
 <!-- _class: full lead narration-white -->
 
-# 要するに、海の向こうの世界
+ただ、もしかしたら Fintech って怖くないかもしれない、、、？
 
-###### (夏だけに)
+---
+
+<!-- _class: full lead narration-white -->
+
+# Fintechって、怖くなかった
+
+###### 今日話すこと
 
 ---
 
@@ -194,6 +158,14 @@ section h1 { color: #fff; }
 転職を考え始め、SmartBank さんのカジュアル面談などもお願いした。
 
 からの、色々あって今の会社 **miive** に。
+
+---
+
+## miive！
+
+<div class="flex justify-center items-center">
+  <img class="h-[500px]" src="./resources/miive-card.png">
+</div>
 
 ---
 
@@ -360,25 +332,46 @@ Visa の他にも ISMS や PCI DSS など、色々な基準がある。**むず�
 
 ---
 
-<!-- _class: full lead narration-white -->
+## シミュラクラ現象
 
-海の向こうだと思ってた Fintech、、、
+<style scoped>
+.simulacra { display: flex; justify-content: center; align-items: center; gap: 3em; margin-top: 1.2em; }
+.face {
+  width: 5.5em; height: 5.5em;
+  border: 3px solid var(--color-foreground);
+  border-radius: 0.6em;
+  display: grid;
+  place-items: center;
+}
+.dots { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9em 1.6em; }
+.dots span { width: 0.75em; height: 0.75em; background: var(--color-foreground); border-radius: 50%; }
+.dots span:last-child { grid-column: 1 / 3; justify-self: center; }
+.caption { text-align: center; margin-top: 0.8em; }
+</style>
 
-<div class="flex justify-center items-center">
-  <img class="h-[400px]" src="./resources/sea-far.svg">
+点が3つ集まると、人は勝手に<strong>「顔」</strong>として認識してしまう。
+
+<div class="simulacra">
+  <div class="face">
+    <div class="dots"><span></span><span></span><span></span></div>
+  </div>
+  <div class="text-5xl font-bold" style="color: var(--color-primary);">=</div>
+  <div class="text-6xl">😱</div>
+</div>
+
+<div class="caption">
+
+正体を知らないものを、人は<u>**勝手に怖いものとして見てしまう**</u>。
+
 </div>
 
 ---
 
 <!-- _class: full lead narration-white -->
 
-# そう、Fintechは地続きだった
+# お化けだと思ってたけど、<br>実際知ってみたらなんてことない
 
-<div class="flex justify-center items-center">
-  <img class="h-[380px]" src="./resources/land-connected.svg">
-</div>
-
-###### 泳がなくても、歩いて来られました
+###### Fintech、怖くないよ
 
 ---
 
@@ -388,4 +381,4 @@ Visa の他にも ISMS や PCI DSS など、色々な基準がある。**むず�
 
 ご清聴ありがとうございました
 
-みなさん、よい夏を！🌊
+みなさん、よい夏を！👻
