@@ -1,6 +1,6 @@
 ---
 theme: mamansoft
-title: Fintechは地続きだった
+title: Fintech ｺﾜｸﾅｲﾖ
 _class: lead
 paginate: true
 ---
@@ -24,63 +24,10 @@ section.narration-white > p {
 <!-- _class: slide-title -->
 
 <div class="title">
-  <div>Fintechは地続きだった</div>
+  <div>Fintech ｺﾜｸﾅｲﾖ</div>
 </div>
 <div class="name">Seiji Nakayama</div>
 <div class="date-and-event">2026/07/13 Welcome Fintech #6 夏の大トーク大会</div>
-
----
-
-<!-- _class: full lead narration-white -->
-
-# Welcome Fintech #6
-
-# 夏の大トーク大会ーーー！！！
-
-<!-- タイトルコール。全力で読み上げる -->
-
----
-
-<!-- _class: full lead narration-white -->
-
-皆さん、夏ですね！
-
----
-
-<!-- _class: full lead narration-white -->
-
-夏といえば、、、？
-
----
-
-<!-- _class: full lead narration-white -->
-
-# 海！
-
----
-
-<!-- _class: full lead narration-white -->
-
-# 海といえば、青！
-
----
-
-<!-- _class: full lead -->
-
-<style scoped>
-section { background: #61ccbe; }
-section h1 { color: #fff; }
-</style>
-
-# 青といえば、miive！
-
----
-
-## miive！
-
-<div class="flex justify-center items-center">
-  <img class="h-[500px]" src="./resources/miive-card.png">
-</div>
 
 ---
 
@@ -118,15 +65,16 @@ section h1 { color: #fff; }
       <span><small>バックエンド・Web・アプリ開発</small></span>
     </div>
     <div class="item">
-      <div class="label">好き</div>
-      <span>
-        Raycast・Vim・ロードバイク<br />
-        <strong>シンプルで拡張性があるプロダクト</strong>
-      </span>
+      <div class="label">性格</div>
+      <span>好奇心旺盛</span>
     </div>
     <div class="item">
-      <div class="label">特徴</div>
-      <span>実家が洋菓子店</span>
+      <div class="label">苦手なもの</div>
+      <span>おばけ</span>
+    </div>
+    <div class="item">
+      <div class="label">好き</div>
+      <span>Raycast・Vim・ロードバイク</span>
     </div>
     <div class="item">
       <div class="label">サイト</div>
@@ -142,24 +90,50 @@ section h1 { color: #fff; }
 
 ---
 
-## 経歴
+## 経歴(色々やってる)
 
 2025/11 より前は、ナビゲーションの会社にいました。
 
 - 物流系のサービス開発
-- 新規事業の 0→1 開発
-- 地図の配信システム開発、SRE
+- サッカーに関する新規事業の 0→1 開発
+- 地図の配信システム開発
+- SRE
 - 一瞬 POS システムの開発にも
 
 詳しくは => [sijis.me](https://sijis.me)
 
 ---
 
-<!-- _class: full lead narration-white -->
+## イベントとかも好き
 
-<!-- 改めてのタイトルコール -->
+**[Raycast Community Japan](https://devx.jp/rct)** の運営もしてたりしてます。
 
-# 「Fintechは地続きだった」
+<div class="flex justify-center items-center mt-6">
+  <img class="h-[420px]" src="./resources/raycast-community-japan.jpeg">
+</div>
+
+---
+
+## 余談: 今日も日中、別のイベントに参加してました
+
+<div class="grid-col-5-5 mt-8">
+<div>
+
+<div class="flex justify-center items-center">
+  <img class="h-[400px]" src="./resources/pmm-conf.png">
+</div>
+
+</div>
+<div class="mt-10">
+
+**PMM JAPAN CONFERENCE 2026**
+
+守屋さんのお話、めっちゃ面白かったです。
+
+<u>**LayerXのどなたか。<br>守屋さんをご紹介いただきたいです mm**</u>
+
+</div>
+</div>
 
 ---
 
@@ -183,51 +157,85 @@ section h1 { color: #fff; }
 
 <!-- _class: full lead narration-white -->
 
-# 要するに、海の向こうの世界
+イベントを通して
 
-###### (夏だけに)
+# 「もしかしたら、こわくないかも」
+
+ってなった
 
 ---
 
-## そこから
+<!-- _class: full lead narration-white -->
 
-転職を考え始め、SmartBank さんのカジュアル面談などもお願いした。
+<style scoped>
+section { padding-bottom: 3em; }
+</style>
 
-からの、色々あって今の会社 **miive** に。
+###### 今日話すこと
+
+# 実際に入ってみて<br>Fintechって怖くなかった
+
+---
+
+<!-- _class: full lead narration-white -->
+
+改めて、<span style="color: var(--color-primary); font-weight: bold;">miive</span> の中山です。
 
 ---
 
 ## miive は福利厚生カードを作っています
 
-- **BtoBtoC** のサービス
-- 管理者(企業側)が制度をつくる
+- **BtoB** のサービス
+- ①管理者画面（web）②従業員向け画面（アプリ/web）③プリペイドカード　から成る
+- 管理者が制度をつくる（ex.食事用途に5000ポイント！半額補助ね！）
 - 従業員はアプリで確認 & <u>**カードで支払う**</u>ことで福利厚生を使える
+
+簡単にいうと<strong>「今の福利厚生、使いづらいから使いやすくしようぜ！」</strong>というサービス。
 
 ---
 
-## ex. ピってやったら半額、会社から補助がでる
+## ポイントとマネー
 
-<div class="flex justify-center items-center gap-8 mt-8">
-  <img class="h-[420px]" src="./resources/miive-card.png">
-  <div class="text-6xl font-bold" style="color: var(--color-primary);">→</div>
-  <img class="h-[420px]" src="./resources/conbini-pay.jpeg">
+会社から付与される<strong>「ポイント」</strong>と、ユーザー自身がチャージする<strong>「マネー」</strong>がある。
+
+ポイントが使えるお店で「ピッ」ってすると、
+
+例えば、<u>**半分はポイントから、半分はマネーから引かれる**</u>。
+
+<div class="flex justify-center items-center gap-8 mt-4">
+  <img class="h-[230px]" src="./resources/miive-card.png">
+  <div class="text-5xl font-bold" style="color: var(--color-primary);">→</div>
+  <img class="h-[230px]" src="./resources/conbini-pay.jpeg">
 </div>
 
 ---
 
-## 入社してからやってたこと
+## 入社してからやってたこと(私の場合)
 
-1〜5ヶ月目は、**サービス開発**、**問い合わせの調査**。
+- **web やアプリが中心のサービス開発**
+- **顧客からの問い合わせ対応** 
+<br>→ <u>**少しずつ決済に触れる**</u>。
 
-<!-- TODO: ギュッと略歴を載せる(オンボ→管理者画面→チーム再編 など1行ずつ) -->
-
-ここ2ヶ月で、<u>**決済に関わる部分**</u>にも手を入れ始めた。
+決済をしっかり触ったのは、**ここ2ヶ月ぐらい**。
 
 ---
 
 <!-- _class: full lead narration-white -->
 
 # 決済、めっちゃたのしい
+
+---
+
+## 楽しいポイント 0: 前提、独特の概念が登場する
+
+| 概念             | ざっくり言うと                                             |
+| ---------------- | ---------------------------------------------------------- |
+| オーソリ         | 店舗で支払った瞬間に飛んでくる「利用予定」の通知(与信枠の確保) |
+| クリアリング     | 後日届く「売上確定」の情報。ここで金額が変わることも       |
+| リコンサイル     | 記録同士を突き合わせて、ズレがないか確認する作業           |
+| イシュア         | カードを発行する側。                  |
+| アクワイアラ     | 加盟店(お店)を管理する側                                   |
+| チャージバック   | 不正利用などで、決済を取り消してお金を取り返す仕組み       |
 
 ---
 
@@ -262,25 +270,30 @@ Visa の他にも ISMS や PCI DSS など、色々な基準がある。**むず�
 
 ---
 
-## 自分はこんなことをやってた
+## ここ2ヶ月、自分はこんなことやってた
 
 - 曜日や時間帯で**決済を制限**
-- **上限金額**を設定
+  - 会社が意図した時間外での決済では、ポイントが使えなくなる
+- **ポイント利用上限**を設定
+  - 一回の決済で使えるポイントの上限金額を制限する(一気にポイントを使い切らないように)
 
 簡単に見えるが、<u>**落とし穴だらけ**</u>。
 
 ---
 
-## 実装前の認識
+## 「曜日や時間帯で決済を制限」機能の場合
 
-- オーソリ(店舗で支払った瞬間に飛んでくる、利用予定の通知)が来た時の情報で判断すればいいんでしょ？**秒じゃん。**
+実装前:「オーソリが来た時の情報で判断すればいいんでしょ？**秒じゃん。**」
 
-<div class="text-center text-5xl font-bold mt-6 mb-6" style="color: var(--color-primary);">↓ 実際</div>
+<div class="text-center text-4xl font-bold mt-4 mb-4" style="color: var(--color-primary);">↓ 実際</div>
 
-- オーソリだけじゃない、<u>**クリアリングでも判断が必要**</u>
-- クリアリング時には**決済した日時が入ってない場合もある**！？
-- **追加徴収**のクリアリングが来た場合 & 元取引が見つからなかったらどうする？
-- 顧客 & ビジネスサイドに**どう説明する**？
+- オーソリだけじゃない、<u>**クリアリングでも判断が必要**</u>。
+
+- **決済した日時が入ってない**クリアリングもある！？
+
+- **追加徴収** & 元取引が見つからない場合、どうする？
+
+- オーソリ、クリアリングの場合の仕様を、顧客・ビジネスサイドに**どう説明する**？
 
 ---
 
@@ -308,7 +321,15 @@ Visa の他にも ISMS や PCI DSS など、色々な基準がある。**むず�
 
 <!-- _class: full lead narration-white -->
 
-ただ、俯瞰してみると、、、
+決済、やっぱり怖いかもしれない、、、むずい。。。
+
+###### お金なにかあったら怖い。。。
+
+---
+
+<!-- _class: full lead narration-white -->
+
+ただ、俯瞰してみると...
 
 ---
 
@@ -318,7 +339,7 @@ Visa の他にも ISMS や PCI DSS など、色々な基準がある。**むず�
 
 ---
 
-## 本当にやってることはおんなじ
+## 極論、通常のサービス開発
 
 <style scoped>
 .flow { display: flex; justify-content: center; align-items: center; gap: 0.6em; margin-top: 1.2em; }
@@ -349,7 +370,7 @@ Visa の他にも ISMS や PCI DSS など、色々な基準がある。**むず�
 </div>
 
 <div class="flow">
-  <div class="step">考える<small>要望・制約の落としどころ</small></div>
+  <div class="step">考える<small>課題深堀り<br>要望・制約の落としどころ</small></div>
   <div class="arrow">→</div>
   <div class="step">作る<small>設計・実装</small></div>
   <div class="arrow">→</div>
@@ -360,25 +381,44 @@ Visa の他にも ISMS や PCI DSS など、色々な基準がある。**むず�
 
 ---
 
-<!-- _class: full lead narration-white -->
+## シミュラクラ現象
 
-海の向こうだと思ってた Fintech、、、
+<style scoped>
+.simulacra { display: flex; justify-content: center; align-items: center; gap: 3em; margin-top: 1.2em; }
+.face {
+  width: 5.5em; height: 5.5em;
+  border: 3px solid var(--color-foreground);
+  border-radius: 0.6em;
+  display: grid;
+  place-items: center;
+}
+.dots { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9em 1.6em; }
+.dots span { width: 0.75em; height: 0.75em; background: var(--color-foreground); border-radius: 50%; }
+.dots span:last-child { grid-column: 1 / 3; justify-self: center; }
+.caption { text-align: center; margin-top: 0.8em; }
+</style>
 
-<div class="flex justify-center items-center">
-  <img class="h-[400px]" src="./resources/sea-far.svg">
+点が3つ集まると、人は勝手に<strong>「顔」</strong>として認識してしまう。
+
+<div class="simulacra">
+  <div class="face">
+    <div class="dots"><span></span><span></span><span></span></div>
+  </div>
+  <div class="text-5xl font-bold" style="color: var(--color-primary);">=</div>
+  <div class="text-6xl">😱</div>
+</div>
+
+<div class="caption">
+
+正体を知らないものを、人は<u>**勝手に怖いものとして見てしまう**</u>。
+
 </div>
 
 ---
 
 <!-- _class: full lead narration-white -->
 
-# そう、Fintechは地続きだった
-
-<div class="flex justify-center items-center">
-  <img class="h-[380px]" src="./resources/land-connected.svg">
-</div>
-
-###### 泳がなくても、歩いて来られました
+# 知ると、Fintech ｺﾜｸﾅｲﾖ
 
 ---
 
@@ -388,4 +428,4 @@ Visa の他にも ISMS や PCI DSS など、色々な基準がある。**むず�
 
 ご清聴ありがとうございました
 
-みなさん、よい夏を！🌊
+みなさん、よい夏を！👻
