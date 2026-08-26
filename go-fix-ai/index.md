@@ -2,6 +2,7 @@
 theme: mamansoft
 title: AIに新しいGoを書かせる
 url: https://n-seiji.github.io/slides/go-fix-ai/
+image: https://n-seiji.github.io/slides/go-fix-ai/resources/ogp.png
 _class: lead
 paginate: true
 ---
