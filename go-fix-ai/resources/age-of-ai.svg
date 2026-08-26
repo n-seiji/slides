@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <radialGradient id="parchment" cx="48%" cy="42%" r="78%">
+      <stop offset="0%" stop-color="#faf6ea" />
+      <stop offset="60%" stop-color="#f2ead6" />
+      <stop offset="100%" stop-color="#e3d6b8" />
+    </radialGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a9743a" />
+      <stop offset="50%" stop-color="#8a5a2b" />
+      <stop offset="100%" stop-color="#5f3d1c" />
+    </linearGradient>
+    <radialGradient id="edge" cx="50%" cy="50%" r="70%">
+      <stop offset="55%" stop-color="#8a6a3a" stop-opacity="0" />
+      <stop offset="100%" stop-color="#8a6a3a" stop-opacity="0.35" />
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+
+    <!-- 羅針図から放射する航程線 (16 方位) -->
+    <g id="rhumb">
+      <g stroke="#8a5a2b" stroke-width="1" opacity="0.2">
+        <line x1="0" y1="0" x2="1600" y2="0" transform="rotate(0)" />
+        <line x1="0" y1="0" x2="1600" y2="0" transform="rotate(22.5)" />
+        <line x1="0" y1="0" x2="1600" y2="0" transform="rotate(45)" />
+        <line x1="0" y1="0" x2="1600" y2="0" transform="rotate(67.5)" />
+        <line x1="0" y1="0" x2="1600" y2="0" transform="rotate(90)" />
+        <line x1="0" y1="0" x2="1600" y2="0" transform="rotate(112.5)" />
+        <line x1="0" y1="0" x2="1600" y2="0" transform="rotate(135)" />
+        <line x1="0" y1="0" x2="1600" y2="0" transform="rotate(157.5)" />
+        <line x1="0" y1="0" x2="1600" y2="0" transform="rotate(180)" />
+        <line x1="0" y1="0" x2="1600" y2="0" transform="rotate(202.5)" />
+        <line x1="0" y1="0" x2="1600" y2="0" transform="rotate(225)" />
+        <line x1="0" y1="0" x2="1600" y2="0" transform="rotate(247.5)" />
+        <line x1="0" y1="0" x2="1600" y2="0" transform="rotate(270)" />
+        <line x1="0" y1="0" x2="1600" y2="0" transform="rotate(292.5)" />
+        <line x1="0" y1="0" x2="1600" y2="0" transform="rotate(315)" />
+        <line x1="0" y1="0" x2="1600" y2="0" transform="rotate(337.5)" />
+      </g>
+    </g>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#parchment)" />
+
+  <!-- 経緯線 -->
+  <g stroke="#9a7a4a" stroke-width="0.6" opacity="0.22">
+    <line x1="0" y1="90" x2="1280" y2="90" />
+    <line x1="0" y1="240" x2="1280" y2="240" />
+    <line x1="0" y1="390" x2="1280" y2="390" />
+    <line x1="0" y1="540" x2="1280" y2="540" />
+    <line x1="0" y1="670" x2="1280" y2="670" />
+    <line x1="150" y1="0" x2="150" y2="720" />
+    <line x1="400" y1="0" x2="400" y2="720" />
+    <line x1="650" y1="0" x2="650" y2="720" />
+    <line x1="900" y1="0" x2="900" y2="720" />
+    <line x1="1150" y1="0" x2="1150" y2="720" />
+  </g>
+
+  <!-- 航程線のハブ -->
+  <use href="#rhumb" transform="translate(1050 175)" />
+  <use href="#rhumb" transform="translate(210 585)" />
+
+  <!-- 海岸線らしきもの -->
+  <g fill="none" stroke="#8a5a2b" stroke-width="1.6" opacity="0.28">
+    <path d="M-20 470 C 90 445, 150 505, 235 480 S 350 430, 430 468 S 520 520, 610 495" />
+    <path d="M700 130 C 780 105, 830 155, 905 132 S 1030 95, 1120 128 S 1250 165, 1310 140" />
+  </g>
+
+  <!-- さざ波 -->
+  <g fill="none" stroke="#8a5a2b" stroke-width="1.2" opacity="0.2" stroke-linecap="round">
+    <path d="M120 250 q 14 -10 28 0 t 28 0" />
+    <path d="M300 320 q 14 -10 28 0 t 28 0" />
+    <path d="M880 470 q 14 -10 28 0 t 28 0" />
+    <path d="M1020 560 q 14 -10 28 0 t 28 0" />
+    <path d="M640 620 q 14 -10 28 0 t 28 0" />
+  </g>
+
+  <!-- 羅針図 -->
+  <g transform="translate(1050 175)">
+    <circle r="118" fill="none" stroke="#8a5a2b" stroke-width="1" opacity="0.5" />
+    <circle r="104" fill="none" stroke="#8a5a2b" stroke-width="0.6" opacity="0.35" />
+    <circle r="56" fill="none" stroke="#8a5a2b" stroke-width="0.6" opacity="0.35" />
+    <g stroke="#8a5a2b" stroke-width="1" opacity="0.5">
+      <line x1="0" y1="-118" x2="0" y2="-104" />
+      <line x1="0" y1="-118" x2="0" y2="-104" transform="rotate(45)" />
+      <line x1="0" y1="-118" x2="0" y2="-104" transform="rotate(90)" />
+      <line x1="0" y1="-118" x2="0" y2="-104" transform="rotate(135)" />
+      <line x1="0" y1="-118" x2="0" y2="-104" transform="rotate(180)" />
+      <line x1="0" y1="-118" x2="0" y2="-104" transform="rotate(225)" />
+      <line x1="0" y1="-118" x2="0" y2="-104" transform="rotate(270)" />
+      <line x1="0" y1="-118" x2="0" y2="-104" transform="rotate(315)" />
+    </g>
+    <!-- 副方位 (細い菱形) -->
+    <g fill="url(#ink)" opacity="0.35">
+      <path d="M0 -96 L 16 0 L 0 96 L -16 0 Z" transform="rotate(45)" />
+      <path d="M0 -96 L 16 0 L 0 96 L -16 0 Z" transform="rotate(135)" />
+    </g>
+    <!-- 主方位 -->
+    <g fill="url(#ink)" opacity="0.6">
+      <path d="M0 -104 L 20 0 L 0 104 L -20 0 Z" />
+      <path d="M0 -104 L 20 0 L 0 104 L -20 0 Z" transform="rotate(90)" />
+    </g>
+    <circle r="7" fill="#f6f2e8" stroke="#8a5a2b" stroke-width="1.4" />
+    <text x="0" y="-128" fill="#8a5a2b" opacity="0.75" font-family="Georgia, serif" font-size="20" text-anchor="middle">N</text>
+  </g>
+
+  <!-- 紙の粒状感と焼け -->
+  <rect width="1280" height="720" filter="url(#grain)" opacity="0.07" />
+  <rect width="1280" height="720" fill="url(#edge)" />
+</svg>
