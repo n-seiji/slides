@@ -2,19 +2,20 @@
 
 Marp 製のスライド置き場。1 ディレクトリ = 1 発表。
 
-公開ページ: https://n-seiji.github.io/slides/(main ブランチのルートを GitHub Pages で配信。
-トップページは `mise run index` で生成)
+公開スライド一覧: [GitHub Pages](https://n-seiji.github.io/slides/)
+
+main ブランチのルートを GitHub Pages で配信。トップページは `mise run index` で生成。
 
 ## デッキ一覧
 
-| デッキ | タイトル | イベント / 日付 |
-|--------|---------|----------------|
-| [raycast-meet-up-1](raycast-meet-up-1/) | Raycastを育てよう！ | Raycast Meetup Japan #1 / 2025/02/21 |
-| [ai-dev-day](ai-dev-day/) | MCPを利用するインターフェースとしてのRaycastのポテンシャル | AI dev day / 2025/06/01 |
-| [intro-novakey](intro-novakey/) | novakey: 開発者募集 | novakey 紹介 / 2024/03/21 |
-| [fintech-first-7months](fintech-first-7months/) | Fintech ｺﾜｸﾅｲﾖ | Welcome Fintech #6 / 2026/07/13 |
-| [go-fix-ai](go-fix-ai/) | AIに新しいGoを書かせる | Go Connect #16 / 2026/08/27 |
-| [format-samples](format-samples/) | ページパターン見本集(コピペ用) | — |
+| デッキ | 公開スライド | タイトル | イベント / 日付 |
+|--------|-------------|---------|----------------|
+| [raycast-meet-up-1](raycast-meet-up-1/) | [GitHub Pages](https://n-seiji.github.io/slides/raycast-meet-up-1/) | Raycastを育てよう！ | Raycast Meetup Japan #1 / 2025/02/21 |
+| [ai-dev-day](ai-dev-day/) | [GitHub Pages](https://n-seiji.github.io/slides/ai-dev-day/) | MCPを利用するインターフェースとしてのRaycastのポテンシャル | AI dev day / 2025/06/01 |
+| [intro-novakey](intro-novakey/) | [GitHub Pages](https://n-seiji.github.io/slides/intro-novakey/) | novakey: 開発者募集 | novakey 紹介 / 2024/03/21 |
+| [fintech-first-7months](fintech-first-7months/) | [GitHub Pages](https://n-seiji.github.io/slides/fintech-first-7months/) | Fintech ｺﾜｸﾅｲﾖ | Welcome Fintech #6 / 2026/07/13 |
+| [go-fix-ai](go-fix-ai/) | [GitHub Pages](https://n-seiji.github.io/slides/go-fix-ai/) | AIに新しいGoを書かせる | Go Connect #16 / 2026/08/27 |
+| [format-samples](format-samples/) | [GitHub Pages](https://n-seiji.github.io/slides/format-samples/) | ページパターン見本集(コピペ用) | — |
 
 ## セットアップ
 
