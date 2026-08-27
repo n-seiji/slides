@@ -144,7 +144,7 @@ h1 strong { color: #b5482e; }
 ```go
 var s interface{}                            // → any
 for i := 0; i < n; i++ {}                    // → for i := range n
-sort.Slice(xs, func(i, j int) bool { ... })  // → slices.Sort
+sort.Slice(xs, func(i, j int) bool { return xs[i] < xs[j] }) // → slices.Sort
 atomic.AddInt64(&counter, 1)                 // → counter.Add(1)
 wg.Add(1); go func() { defer wg.Done() }()   // → wg.Go(...)
 ```
@@ -183,18 +183,18 @@ wg.Add(1); go func() { defer wg.Done() }()   // → wg.Go(...)
 
 ---
 
-## `go vet` と `go fix` は兄弟
+## `go vet` はチェック、`go fix` は更新
 
-同じ **analysis framework** の上に建っている。違うのは*出口*
+同じ **analysis framework** を使うが、*役割と標準動作*が違う
 
-| | 見つけるもの | どうする |
+| | 役割 | 標準では |
 |---|---|---|
-| `go vet` | 疑わしい書き方 | **報告する**(直さない) |
-| `go fix` | 改善できる書き方 | **書き換える** |
+| `go vet` | バグになりそうなコードを探す | **報告する** |
+| `go fix` | 今風に直せるコードを探す | **書き換える** |
 
-<div class="note">go vet は「怪しいから見て」、go fix は「こう直せる」まで持っている</div>
+<div class="note">go vet も -fix を付ければ、直せるものは書き換えられる</div>
 
-### **直し方が一意に決まるもの**だけが `go fix` 側に来る
+### `go fix` は、コードを**今の Go らしい書き方へ更新する**入口
 
 ---
 
@@ -408,7 +408,7 @@ section ul {
 .novelty {
   position: absolute;
   right: -40px;
-  bottom: -30px;
+  bottom: 10px;
   width: 620px;
   transform: rotate(-4deg);
   filter: drop-shadow(0 10px 24px rgba(90, 70, 40, 0.25));
