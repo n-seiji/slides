@@ -13,6 +13,7 @@ Marp 製のスライド置き場。1 ディレクトリ = 1 発表。
 | [ai-dev-day](ai-dev-day/) | MCPを利用するインターフェースとしてのRaycastのポテンシャル | AI dev day / 2025/06/01 |
 | [intro-novakey](intro-novakey/) | novakey: 開発者募集 | novakey 紹介 / 2024/03/21 |
 | [fintech-first-7months](fintech-first-7months/) | Fintech ｺﾜｸﾅｲﾖ | Welcome Fintech #6 / 2026/07/13 |
+| [go-fix-ai](go-fix-ai/) | AIに新しいGoを書かせる | Go Connect #16 / 2026/08/27 |
 | [format-samples](format-samples/) | ページパターン見本集(コピペ用) | — |
 
 ## セットアップ
