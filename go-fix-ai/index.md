@@ -81,7 +81,7 @@ section.narration-white > p {
 
 ---
 
-## miive をやっています
+## miiveではGoを利用しています！
 
 従業員向けの**プリペイドカード型 福利厚生プラットフォーム**
 
@@ -91,19 +91,62 @@ section.narration-white > p {
 
 ### 決済だからこそ、*軽量 & 型安全*な Go
 
-<div class="note">Go / MySQL / Redis / ECS</div>
 
 ---
 
-## Go は半年に1回変わる
+## 余談：miive と Go、カラーが近い
 
-| バージョン | リリース |
-|---|---|
-| 1.25 | 2025年8月 |
-| 1.26 | 2026年2月 |
-| **1.27** | **2026年8月** |
+<style scoped>
+.brand-colors {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  gap: 3rem;
+  align-items: center;
+}
+.miive-brand {
+  text-align: center;
+}
+.miive-brand img {
+  display: block;
+  width: 330px;
+  margin: -3rem auto -2rem;
+}
+.go-palette {
+  display: grid;
+  gap: 0.8rem;
+}
+.go-color {
+  padding: 0.7rem 1rem;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0.25rem;
+}
+.gopher-blue { background: #00add8; }
+.light-blue { background: #5dc9e2; color: #33302a; }
+.aqua { background: #00a29c; }
+</style>
 
-半年ごとに、書き方も標準ライブラリも少しずつ新しくなる
+<div class="brand-colors">
+<div class="miive-brand">
+  <img src="resources/miive-logo.png" alt="miive" />
+  <strong>miive</strong>
+</div>
+<div>
+
+### Go 公式カラーパレット
+
+<div class="go-palette">
+  <div class="go-color gopher-blue">GOPHER BLUE　#00ADD8</div>
+  <div class="go-color light-blue">LIGHT BLUE　#5DC9E2</div>
+  <div class="go-color aqua">AQUA　#00A29C</div>
+</div>
+
+</div>
+</div>
+
+### Light Blue〜Aquaあたり、近い気がしている
+
+<div class="note">出典: <a href="https://go.dev/s/brandbook">Go Brand Book</a></div>
 
 ---
 
@@ -127,7 +170,7 @@ h1 strong { color: #b5482e; }
 
 # 世はまさに<br />**大AI時代**！
 
-<div class="note">Claude Code / Codex / OpenCode …</div>
+<div class="note">miiveでも Claude Code / Codex / OpenCode / Raycast / Devin …</div>
 
 ---
 
@@ -136,6 +179,18 @@ h1 strong { color: #b5482e; }
 ## AI は「学習したもの」
 
 ## <span class="text-primary">書き方が、学習データの時点で止まっている</span>
+
+---
+
+## Go は半年に1回変わる
+
+| バージョン | リリース |
+|---|---|
+| 1.25 | 2025年8月 |
+| 1.26 | 2026年2月 |
+| **1.27** | **2026年8月** |
+
+半年ごとに、書き方も標準ライブラリも少しずつ新しくなる
 
 ---
 
@@ -180,6 +235,25 @@ wg.Add(1); go func() { defer wg.Done() }()   // → wg.Go(...)
 <strong>モダナイザの本拠地</strong>になった。<br />
 古い fixer は、すべて時代遅れになっていたので<strong>削除された</strong>。
 </div>
+
+---
+
+## modernize は「スタイル」だけの話ではない
+
+`atomictypes`
+
+```go
+// Before
+var counter int64
+atomic.AddInt64(&counter, 1)
+
+// After
+var counter atomic.Int64
+counter.Add(1)
+```
+
+- **非アトミックなアクセスが型で不可能になる**
+- 32bit 環境のアライメントバグも黙って消える
 
 ---
 
@@ -229,44 +303,6 @@ Go の文法が変わったのではなく、**`go fix` が直せる範囲**が�
 
 </div>
 </div>
-
----
-
-## modernize は「スタイル」だけの話ではない
-
-`atomictypes`
-
-```go
-// Before
-var counter int64
-atomic.AddInt64(&counter, 1)
-
-// After
-var counter atomic.Int64
-counter.Add(1)
-```
-
-- **非アトミックなアクセスが型で不可能になる**
-- 32bit 環境のアライメントバグも黙って消える
-
----
-
-## 機械に任せる範囲も、間違えたら戻す
-
-`fmtappendf` は 1.27 で**削除**された
-
-```go
-// 1.26 では、これを機械的に書き換えていた
-b := []byte(fmt.Sprintf("%s=%d", k, v))
-b := fmt.Appendf(nil, "%s=%d", k, v)   // ← アロケーションは減る
-```
-
-- でも `w` に書きたいだけなら `fmt.Fprintf(w, ...)` の方が良い
-- **文脈を見ないと「正解」が決まらなかった** → *stylistic concerns* として撤回
-
-### **一意に直せないものは、`go fix` に置いてはいけない**
-
-<div class="note">出典: Go 1.27 Release Notes</div>
 
 ---
 
@@ -335,9 +371,7 @@ go fix -diff ./...  # 直さずに差分だけ出す(CI 用)
 
 ---
 
-## ただ、これだけでは足りない
-
-AI がもたらした副作用が、もう 2 つ
+## 蛇足：AI がもたらした副作用が、もう 2 つ
 
 <div class="grid-col-5-5">
 <div>
@@ -346,9 +380,6 @@ AI がもたらした副作用が、もう 2 つ
 
 動かしていないのに
 「実装しました」と言う
-
-→ 人のレビューではなく
-**CI で落とす**
 
 </div>
 <div>
@@ -365,12 +396,28 @@ AI がもたらした副作用が、もう 2 つ
 
 ---
 
-## チェックが増える = CI が遅くなる
+## AI 時代のチェックを、速く回す
 
-**機械にやらせることを増やすなら、機械が速くないと回らない**
+<div class="grid-col-5-5">
+<div>
 
-- miive では Blacksmith を入れて CI を高速化
-- 「増やす」と「速くする」はセット
+### ① 正しさを担保する
+
+- **CI で落とす**
+- **AI でレビュー**（Devin など）
+
+</div>
+<div>
+
+### ② 待ち時間を減らす
+
+- テストそのものを高速化
+- **Blacksmith** で CI 基盤も高速化
+
+</div>
+</div>
+
+**チェックを増やしても、開発を止めない**
 
 ---
 
@@ -390,7 +437,6 @@ section ul {
 - Go は半年に 1 回変わる。**AI はそれに追いつかない**
 - `go fix` は 1.26 で modernizer の本拠地になった
 - **コードベースを新しく保てば、AI の出力も新しくなる**
-- チェックは増える一方 → CI は速くする
 
 ---
 
@@ -399,6 +445,14 @@ section ul {
 # `go fix ./...`
 
 ## まだ叩いていない方はぜひ
+
+---
+
+<!-- _class: lead -->
+
+## こんなものも話題
+
+[JetBrains/go-modern-guidelines](https://github.com/JetBrains/go-modern-guidelines)
 
 ---
 
