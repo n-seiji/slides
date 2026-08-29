@@ -3,6 +3,11 @@
 # 使い方: ./generate-index.sh (または mise run index)
 set -eu
 
+if ! command -v jq >/dev/null 2>&1; then
+  echo "エラー: jq が必要です" >&2
+  exit 1
+fi
+
 cd "$(dirname "$0")"
 
 # デッキ情報を「日付|ディレクトリ|タイトル|イベント」形式で収集(日付降順)
@@ -82,5 +87,49 @@ HEADER
 </html>
 FOOTER
 } > index.html
+
+slides='[]'
+
+for d in */; do
+  d="${d%/}"
+  [ "$d" = "template" ] && continue
+  [ -f "$d/index.html" ] || continue
+  [ -f "$d/README.md" ] || continue
+  grep -q '^- イベント:' "$d/README.md" || continue
+  grep -q '^- 日付:' "$d/README.md" || continue
+  grep -q '^- 掲載: しない$' "$d/README.md" && continue
+
+  title=$(sed -n '1s/^# //p' "$d/README.md")
+  event=$(sed -n 's/^- イベント: *//p' "$d/README.md" | sed -n '1p')
+  date=$(sed -n 's/^- 日付: *//p' "$d/README.md" | sed -n '1p')
+  event_url=$(sed -n 's/^- 発表 URL: *//p' "$d/README.md" | sed -n '1p')
+  description=$(sed -n 's/^- 説明: *//p' "$d/README.md" | sed -n '1p')
+  tags=$(sed -n 's/^- タグ: *//p' "$d/README.md" | sed -n '1p')
+  tags_json=$(jq -cn --arg tags "$tags" \
+    '$tags | split(",") | map(gsub("^\\s+|\\s+$"; "")) | map(select(length > 0))')
+
+  item=$(jq -cn \
+    --arg slug "$d" \
+    --arg title "${title:-$d}" \
+    --arg event "$event" \
+    --arg date "$date" \
+    --arg slideUrl "https://n-seiji.github.io/slides/$d/" \
+    --arg eventUrl "$event_url" \
+    --arg description "$description" \
+    --argjson tags "$tags_json" \
+    '{
+      slug: $slug,
+      title: $title,
+      event: $event,
+      date: $date,
+      slideUrl: $slideUrl,
+      eventUrl: ($eventUrl | if length == 0 then null else . end),
+      description: ($description | if length == 0 then null else . end),
+      tags: $tags
+    }')
+  slides=$(jq -cn --argjson slides "$slides" --argjson item "$item" '$slides + [$item]')
+done
+
+printf '%s\n' "$slides" | jq 'sort_by(.date) | reverse' > slides.json
 
 echo "生成しました: index.html"

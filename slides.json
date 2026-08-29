@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "go-fix-ai",
+    "title": "AIに新しいGoを書かせる",
+    "event": "Go Connect #16",
+    "date": "2026/08/27",
+    "slideUrl": "https://n-seiji.github.io/slides/go-fix-ai/",
+    "eventUrl": "https://gotalk.connpass.com/event/398015/",
+    "description": "AIに新しいGoの書き方を教え、モダンなGoコードを書かせるための工夫について発表。",
+    "tags": [
+      "Go",
+      "AI"
+    ]
+  },
+  {
+    "slug": "fintech-first-7months",
+    "title": "Fintech ｺﾜｸﾅｲﾖ",
+    "event": "Welcome Fintech #6 夏の大トーク大会",
+    "date": "2026/07/13",
+    "slideUrl": "https://n-seiji.github.io/slides/fintech-first-7months/",
+    "eventUrl": "https://welcome-fintech.connpass.com/event/396757/",
+    "description": "Fintechの面白さについて熱弁。",
+    "tags": [
+      "Fintech",
+      "キャリア"
+    ]
+  },
+  {
+    "slug": "ai-dev-day",
+    "title": "MCPを利用するインターフェースとしてのRaycastのポテンシャル",
+    "event": "AI dev day",
+    "date": "2025/06/01",
+    "slideUrl": "https://n-seiji.github.io/slides/ai-dev-day/",
+    "eventUrl": null,
+    "description": "Model Context Protocol（MCP）とRaycastを組み合わせた開発者体験の向上について発表。MCPの仕組みと、Raycastがその優秀なインターフェースとしてどのように機能するかを解説しました。",
+    "tags": [
+      "MCP",
+      "Raycast",
+      "AI",
+      "開発者体験"
+    ]
+  },
+  {
+    "slug": "raycast-meet-up-1",
+    "title": "Raycastを育てよう！",
+    "event": "Raycast Meetup Japan #1",
+    "date": "2025/02/21",
+    "slideUrl": "https://n-seiji.github.io/slides/raycast-meet-up-1/",
+    "eventUrl": "https://lu.ma/gm3fw7fi",
+    "description": "Raycast extensionの開発について発表。Raycastの拡張機能を作成する際のベストプラクティスや、開発者コミュニティでの貢献方法について共有しました。",
+    "tags": [
+      "Raycast",
+      "Extension",
+      "開発者ツール",
+      "生産性"
+    ]
+  }
+]
