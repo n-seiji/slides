@@ -5,6 +5,17 @@ Marp 製のスライド置き場。1 ディレクトリ = 1 発表。
 公開スライド一覧: [GitHub Pages](https://n-seiji.github.io/slides/)
 
 main ブランチのルートを GitHub Pages で配信。トップページは `mise run index` で生成。
+同じコマンドで、公開デッキの機械可読な一覧 [`slides.json`](slides.json) も生成する。
+
+各デッキの `README.md` では、見出し直下に次のメタ行を記載する。
+
+- `- イベント:` / `- 日付: YYYY/MM/DD` — `slides.json` への掲載に必須
+- `- 発表 URL:` — イベントページなどの URL（省略時は `null`）
+- `- 説明:` — 発表の説明（省略時は `null`）
+- `- タグ: a, b, c` — カンマ区切りのタグ（省略時は空配列）
+- `- 掲載: しない` — `slides.json` から除外
+
+`template/` と `index.html` がないディレクトリも `slides.json` の対象外になる。
 
 ## デッキ一覧
 
