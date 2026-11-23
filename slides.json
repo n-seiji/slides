@@ -1,5 +1,20 @@
 [
   {
+    "slug": "raycast-onboard",
+    "title": "Raycast に Raycast を育ててもらう",
+    "event": "Raycast Meetup Japan #3 with masuipeo",
+    "date": "2026/11/24",
+    "slideUrl": "https://n-seiji.github.io/slides/raycast-onboard/",
+    "eventUrl": "https://raycast.connpass.com/event/411739/",
+    "description": "Raycast v2.13 の Raycast MCP Server と公式 Examples を紹介し、Raycast AI の Skills で「Raycast に Raycast を育ててもらう」オンボーディング用リポジトリ raycast-onboard を紹介した LT。",
+    "tags": [
+      "Raycast",
+      "MCP",
+      "AI",
+      "Skills"
+    ]
+  },
+  {
     "slug": "go-fix-ai",
     "title": "AIに新しいGoを書かせる",
     "event": "Go Connect #16",
