@@ -69,6 +69,10 @@ section blockquote .ja {
   <h5 class="text-dimmed">ただのVimmer</h5>
   <div class="mt-12 space-y-2 text-2xl">
     <div class="item">
+      <div class="label">所属</div>
+      <span>株式会社miive</span>
+    </div>
+    <div class="item">
       <div class="label">業務</div>
       <span><small>バックエンド・Webの開発(たまにアプリ)</small></span>
     </div>
@@ -273,6 +277,8 @@ Settings → MCP → Raycast MCP Server → **Examples → Show All**。コピ�
 
 <!-- _class: full lead narration-white -->
 
+<div style="position: absolute; top: 40px; right: 56px; padding: 6px 22px; border: 2px solid var(--color-primary); border-radius: 9999px; color: var(--color-primary); font-size: 26px; font-weight: 700;">再掲</div>
+
 # 設定なんて、もう<br>人の手でやってられない
 
 ###### Raycast MCP のツールで、今まで手でやっていたことをやってもらう
@@ -372,15 +378,15 @@ git clone https://github.com/n-seiji/lazy-raycast ~/lazy-raycast
 
 ## raycast-level: レベルとタイプを出す
 
-<div class="flex items-center gap-6">
-<img class="h-[440px]" src="./resources/level-run.png">
-<div style="flex: 1;">
+<div class="flex justify-center gap-10 mt-6" style="height: 450px;">
+<img style="height: 450px;" src="./resources/level-run.png">
+<div style="width: 590px; display: flex; flex-direction: column; justify-content: space-between;">
 
-<img class="w-full rounded-xl" src="./resources/level-card.png">
+<img class="w-full rounded-xl" src="./resources/level-clipboard.png">
 
-<div class="text-xl mt-4">
+<div class="text-xl">
 
-**結果カード** はクリップボードに入る。X の投稿画面で ⌘V
+**結果カード** がクリップボードに入る。X の投稿画面で ⌘V
 
 </div>
 </div>
@@ -413,31 +419,17 @@ git clone https://github.com/n-seiji/lazy-raycast ~/lazy-raycast
 
 ---
 
-<!-- _class: grid-5-5 -->
+## おまけ: Raycast が全部の AI のハブになるかも
 
-## 使い分け
+<div class="flex items-center gap-6 mt-8">
+<div class="text-2xl" style="flex: 1;">
 
-<div class="left">
-
-### Raycast の中で完結
-
-**Skills**(AI Chat / Quick AI)
-
-- 設定の提案・変更、片づけ
-- 承認は Raycast がやってくれる
-- 今日作った `lazy-raycast` はこっち
+- 試した: **Claude Code のメモリを Raycast に移す**
+- Raycast に置いておけば、**Claude でも Codex でも MCP でつなげば読み足せる**
+- 入れた文は Raycast 側の LLM が要約に溶かし込む
 
 </div>
-<div class="right">
-
-### 外の agent から MCP
-
-**Examples**(Claude Code など)
-
-- 外の agent の知識を Raycast に入れる
-- 例: **Teach Raycast About Me**<br>= Claude の memory → Raycast Memory
-- 承認は agent 側の設定次第
-
+<img class="w-[720px]" src="./resources/memory-migrate.png">
 </div>
 
 ---
@@ -466,21 +458,6 @@ git clone https://github.com/n-seiji/lazy-raycast ~/lazy-raycast
 - MCP に **`@manual`** が入っているので、説明は公式マニュアルを根拠にさせられる
 
 <div class="note mt-6">AI 向けドキュメント: <a href="https://manual.raycast.com/llms.txt">manual.raycast.com/llms.txt</a>(全文は <code>llms-full.txt</code>)</div>
-
----
-
-## おまけ: Raycast が全部の AI のハブになるかも
-
-<div class="flex items-center gap-6">
-<div class="text-2xl" style="flex: 1;">
-
-- 試した: **Claude Code のメモリを Raycast に移す**
-- Raycast に置いておけば、**Claude でも Codex でも MCP でつなげば読み足せる**
-- 入れた文は Raycast 側の LLM が要約に溶かし込む
-
-</div>
-<img class="w-[760px]" src="./resources/memory-migrate.png">
-</div>
 
 ---
 
