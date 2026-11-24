@@ -303,12 +303,12 @@ Settings → MCP → Raycast MCP Server → **Examples → Show All**。コピ�
 
 ## [lazy-raycast](https://github.com/n-seiji/lazy-raycast) *面倒だから任せちゃおう*
 
-| Skill | 話しかけ方 | やること |
-|-------|----------|---------|
-| `raycast-onboard` | 「オンボーディングして」 | 普段の作業を聞いて **設定を作り、呼び出し方を案内** |
-| `raycast-growth` | 「設定を良くして」 | 設定を **提案して実際に設定**。最近のリリースも拾う |
-| `raycast-tidy` | 「スッキリさせたい」 | 重複・衝突を洗い出して **承認したものだけ片づけ** |
-| `raycast-level` | 「何レベル?」 | **7 観点で採点して 4 段階** で出す(読むだけ) |
+| Skill | やること |
+|-------|---------|
+| `raycast-onboard` | 普段の作業を聞いて **設定を作り、呼び出し方を案内** |
+| `raycast-growth` | 設定を **提案して実際に設定**。最近のリリースも拾う |
+| `raycast-tidy` | 重複・衝突を洗い出して **承認したものだけ片づけ** |
+| `raycast-level` | 7 観点で採点して **レベルとタイプ** を出す(読むだけ) |
 
 ```sh
 git clone https://github.com/n-seiji/lazy-raycast ~/lazy-raycast
@@ -319,37 +319,37 @@ git clone https://github.com/n-seiji/lazy-raycast ~/lazy-raycast
 
 ## raycast-onboard: 聞く → 作る → 呼び出し方を案内
 
-| 機能 | 聞くこと | 作るもの | 案内 |
-|------|---------|---------|------|
-| Quicklinks | 毎日開くサイトは? | Quicklink | 「`gh` と打って Enter で開けます」 |
-| Snippets | 何度も打つ定型文は? | Snippet + キーワード | 「`;mail` と打つと展開されます」 |
-| Hotkey | よく使うアプリやコマンドは? | Hotkey | 「このキーで一発で開きます」 |
-| 拡張 | 仕事で使うサービスは? | 拡張をインストール | 「このコマンドで検索できます」 |
+<div class="flex items-center gap-6">
+<div class="text-2xl" style="flex: 1;">
 
-<div class='mt-4 text-2xl'>
+1. **いまの設定を読む**(できているものは飛ばす)
+2. **聞く**: 「いちばんよく開くアプリは?」
+3. **作る**: 内容を見せて承認 → 設定
+4. **案内**: 「このキーで開けます」
 
-設定画面は開かない。**質問に答えて、最後に 1 回試すだけ**(作る前に内容を見せて承認)
+設定画面は開かない。**質問に答えるだけ**
 
+</div>
+<img class="h-[520px]" src="./resources/onboard-run.png">
 </div>
 
 ---
 
 ## raycast-growth: 提案 → 承認 → 適用 → 確認
 
-| 対象 | 何を見て提案するか |
-|------|------------------|
-| Hotkey / Alias | 既存の付け方のルールと重複、よく使うアプリ |
-| Snippets | 何度もコピーしているテキスト |
-| Quicklinks | 何度もコピーしている URL、開いているタブ |
-| 拡張 | 使っているアプリに合う、未インストールのもの |
-| 設定 / AI モデル | 既定のままの便利設定(根拠は `@manual`) |
-| 最近のリリース | changelog から、関係ありそうな新機能を最大 3 つ |
+<div class="flex items-center gap-6">
+<div class="text-2xl" style="flex: 1;">
 
-<div class='mt-4 text-2xl'>
+- **おまかせ** なら、設定を見て 3 つまで提案
+- Hotkey / Alias、Snippets / Quicklinks
+- **おすすめの拡張**
+- AI モデル / AI Command / Agent
+- **最近のリリース・新機能**
 
-<!-- TODO: 動作確認後にスクショを追加 -->
-**1 回の承認で 1 つの変更**。上書きするときは元の値を必ず見せる
+**1 回の承認で 1 つの変更**
 
+</div>
+<img class="h-[500px]" src="./resources/growth-run.png">
 </div>
 
 ---
@@ -370,24 +370,25 @@ git clone https://github.com/n-seiji/lazy-raycast ~/lazy-raycast
 
 ---
 
-## raycast-level: 7 観点で採点して 4 段階
+## raycast-level: レベルとタイプを出す
 
-<!-- TODO: 実際の結果のスクショに差し替え -->
+<div class="flex items-center gap-6">
+<img class="h-[440px]" src="./resources/level-run.png">
+<div style="flex: 1;">
 
-```
-## Lv3 ⌘⌥⌃(12 / 21)
+<img class="w-full rounded-xl" src="./resources/level-card.png">
 
-⌨️ 呼び出し      ■■□  Hotkey 6 個
-📋 クリップボード ■■■  よく再利用してる
-✂️ Snippets      ■□□  3 個
-🔗 Quicklinks    ■■□  8 個
-🧩 拡張          ■■■  24 個
-...
-```
+<div class="text-xl mt-4">
+
+**結果カード** はクリップボードに入る。X の投稿画面で ⌘V
+
+</div>
+</div>
+</div>
 
 <div class='mt-4 text-2xl'>
 
-⌘ → ⌘⌥ → **⌘⌥⌃** → ⌘⌥⌃⇧。修飾キーが 1 つずつ増えて、**4 つそろうと Hyper Key**
+1 Launcher → 2 Extensions → 3 Hotkey → **4 Hyper Key**。ぜひ **#raycast_meetup_jp** で共有を
 
 </div>
 
@@ -460,11 +461,26 @@ git clone https://github.com/n-seiji/lazy-raycast ~/lazy-raycast
 ## わかったこと
 
 - **設定・Hotkey の読み書き、Snippet / Quicklink の作成、拡張のインストール** まで任せられる
-- **Raycast コマンドの使用回数は取れない**(アプリの起動回数は `mdls` で取れるが Spotlight 頼み)
+- **Raycast コマンドの使用回数は取れない**(アプリの起動回数は `mdls -name kMDItemUseCount` で取れるが Spotlight 頼み)
 - **AI Commands は名前もプロンプトも読めない**(見えるのは ID と Hotkey だけ)
 - MCP に **`@manual`** が入っているので、説明は公式マニュアルを根拠にさせられる
 
 <div class="note mt-6">AI 向けドキュメント: <a href="https://manual.raycast.com/llms.txt">manual.raycast.com/llms.txt</a>(全文は <code>llms-full.txt</code>)</div>
+
+---
+
+## おまけ: Raycast が全部の AI のハブになるかも
+
+<div class="flex items-center gap-6">
+<div class="text-2xl" style="flex: 1;">
+
+- 試した: **Claude Code のメモリを Raycast に移す**
+- Raycast に置いておけば、**Claude でも Codex でも MCP でつなげば読み足せる**
+- 入れた文は Raycast 側の LLM が要約に溶かし込む
+
+</div>
+<img class="w-[760px]" src="./resources/memory-migrate.png">
+</div>
 
 ---
 
@@ -477,5 +493,7 @@ git clone https://github.com/n-seiji/lazy-raycast ~/lazy-raycast
 <!-- _class: slide-last -->
 
 # ご清聴ありがとうございました
+
+<div class="text-3xl" style="color: #fff;">#raycast_meetup_jp</div>
 
 <a class="text-3xl" style="color: #fff; text-decoration: underline;" href="https://github.com/n-seiji/lazy-raycast">github.com/n-seiji/lazy-raycast</a>
