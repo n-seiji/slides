@@ -26,6 +26,7 @@ main ブランチのルートを GitHub Pages で配信。トップページは 
 | [intro-novakey](intro-novakey/) | [GitHub Pages](https://n-seiji.github.io/slides/intro-novakey/) | novakey: 開発者募集 | novakey 紹介 / 2024/03/21 |
 | [fintech-first-7months](fintech-first-7months/) | [GitHub Pages](https://n-seiji.github.io/slides/fintech-first-7months/) | Fintech ｺﾜｸﾅｲﾖ | Welcome Fintech #6 / 2026/07/13 |
 | [go-fix-ai](go-fix-ai/) | [GitHub Pages](https://n-seiji.github.io/slides/go-fix-ai/) | AIに新しいGoを書かせる | Go Connect #16 / 2026/08/27 |
+| [raycast-mcp-server](raycast-mcp-server/) | [GitHub Pages](https://n-seiji.github.io/slides/raycast-mcp-server/) | Raycast MCP Server | Raycast Meetup Japan #3 / 2026/11/24 |
 | [format-samples](format-samples/) | [GitHub Pages](https://n-seiji.github.io/slides/format-samples/) | ページパターン見本集(コピペ用) | — |
 
 ## セットアップ
