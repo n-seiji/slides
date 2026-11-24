@@ -1,12 +1,12 @@
 [
   {
-    "slug": "raycast-onboard",
-    "title": "Raycast に Raycast を育ててもらう",
+    "slug": "raycast-mcp-server",
+    "title": "Raycast MCP Server",
     "event": "Raycast Meetup Japan #3 with masuipeo",
     "date": "2026/11/24",
-    "slideUrl": "https://n-seiji.github.io/slides/raycast-onboard/",
+    "slideUrl": "https://n-seiji.github.io/slides/raycast-mcp-server/",
     "eventUrl": "https://raycast.connpass.com/event/411739/",
-    "description": "Raycast v2.13 の Raycast MCP Server と公式 Examples を紹介し、Raycast AI の Skills で「Raycast に Raycast を育ててもらう」オンボーディング用リポジトリ raycast-onboard を紹介した LT。",
+    "description": "Raycast v2.13 の Raycast MCP Server と公式 Examples を紹介し、Raycast AI の Skills で設定の提案・変更を任せる Skills 集 lazy-raycast を紹介した LT。",
     "tags": [
       "Raycast",
       "MCP",
